@@ -1,1 +1,9 @@
-/* TODO Add site wide styles */
+.notfound {
+    font-size: 4rem;
+    color: white;
+    height:800px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(https://i.pinimg.com/originals/6a/ef/b6/6aefb6c891fad9b652dc981df14c884d.jpg);
+    background-repeat: no-repeat;
+}
