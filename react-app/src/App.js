@@ -7,7 +7,10 @@ import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
+import About from './components/Footer/About';
+import Technology from './components/Footer/Technology';
 import NotFound from './components/NotFound';
+import Footer from './components/Footer/Footer';
 import { authenticate } from './store/session';
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
+        <Route path='/' exact={true} >
+          <h1>My Home Page</h1>
+        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
@@ -41,15 +47,20 @@ function App() {
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
-        </ProtectedRoute>
+
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/technology'>
+          <Technology />
+        </Route>
 
         <Route path=''>
           <NotFound />
         </Route>
 
       </Switch>
+          <Footer />
     </BrowserRouter>
   );
 }

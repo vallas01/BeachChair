@@ -1,0 +1,119 @@
+.aboutImage {
+    margin: 1px;
+    width: 100px;
+    border: 1px solid rgba(0,0,0,30%);
+    border-radius: 10px;
+}
+
+.aboutMe,
+.aboutMe p {
+    text-align: center;
+    margin: 0px 200px 0px 200px;
+    border: 0px;
+}
+
+
+.fa-linkedin, .fa-github-square {
+    margin: 5px;
+}
+
+
+.team-container {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-container1 {
+    font-size: x-small;
+    margin: 1px;
+    height: 10px;
+    width: 140px;
+    color: green;
+}
+
+.team-container2 {
+    color: green;
+    height: 10px
+}
+
+
+.link-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fa-brands,
+.fa-solid {
+    margin: 25px;
+}
+
+.developer-link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    color: rgb(40, 64, 12);
+    text-decoration: none;
+}
+
+.footer-link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: .8rem;
+    padding: 6px 2px;
+    color: rgb(40, 64, 12);
+    text-decoration: none;
+}
+
+.developer-link:hover,
+.footer-link:hover {
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+
+
+
+/* about CSS below*/
+
+.headingOne,
+.headingTwo,
+.aboutP {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+.headingOne {
+    margin-top: 80px;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.headingTwo {
+    margin: 20px 0px;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.aboutP {
+    text-align: center;
+    margin: 0px 200px 20px 200px;
+}
+
+
+
+.footerImage {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.about {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 100px;
+}

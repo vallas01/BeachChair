@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import './LoginForm.css'
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
@@ -19,6 +20,8 @@ const SignUpForm = () => {
       if (data) {
         setErrors(data)
       }
+    } else {
+      return setErrors(['Confrim Password did not match'])
     }
   };
 
@@ -44,7 +47,7 @@ const SignUpForm = () => {
 
   return (
     <form onSubmit={onSignUp}>
-      <div>
+      <div className='errorMessage'>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
@@ -77,7 +80,7 @@ const SignUpForm = () => {
         ></input>
       </div>
       <div>
-        <label>Repeat Password</label>
+        <label>Confirm Password</label>
         <input
           type='password'
           name='repeat_password'

@@ -1,3 +1,8 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 .notfound {
     font-size: 4rem;
     color: white;
@@ -7,3 +12,21 @@
     background-image: url(https://i.pinimg.com/originals/6a/ef/b6/6aefb6c891fad9b652dc981df14c884d.jpg);
     background-repeat: no-repeat;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px
+}
+
+
+
