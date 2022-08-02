@@ -1,3 +1,18 @@
+# BeachChair, An App Academy Capstone Project
+
+
+<p align="center">
+Written by Andy Vallas
+</p>
+<p align="center">
+https://beachchair.herokuapp.com (live link)
+</p>
+<p align="center">
+(Login, write a review or add a photo and then click on your icon in the upper right corner to edit or delete your posts.)
+</p>
+
+<p align="center"> ************************************************************************************ </p>
+
 # Flask React Project
 
 This is the starter for the Flask React project.
