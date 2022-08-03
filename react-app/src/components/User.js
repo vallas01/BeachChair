@@ -29,7 +29,16 @@ function User() {
         <strong>Username</strong> {user.username}
       </li>
       <li>
+        <strong>First Name</strong> {user.first_name}
+      </li>
+      <li>
+        <strong>Last Name</strong> {user.last_name}
+      </li>
+      <li>
         <strong>Email</strong> {user.email}
+      </li>
+      <li>
+        <strong>Avatar</strong> {user.avatar}
       </li>
     </ul>
   );

@@ -7,7 +7,11 @@ import './LoginForm.css'
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
+  const [first_name, setFirstname] = useState('');
+  const [last_name, setLastname] = useState('');
   const [email, setEmail] = useState('');
+  // eslint-disable-next-line
+  // const [avatar, setAvatar] = useState('https://www.austriabc.com/wp-content/uploads/2019/08/default-profile.png');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
@@ -16,12 +20,12 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+      const data = await dispatch(signUp(username, first_name, last_name, email, password));
       if (data) {
         setErrors(data)
       }
     } else {
-      return setErrors(['Confrim Password did not match'])
+      return setErrors(['Confirm Password did not match'])
     }
   };
 
@@ -29,22 +33,33 @@ const SignUpForm = () => {
     setUsername(e.target.value);
   };
 
+  const updateFirstname = (e) => {
+    setFirstname(e.target.value);
+  };
+  
+  const updateLastname = (e) => {
+    setLastname(e.target.value);
+  };
+
   const updateEmail = (e) => {
     setEmail(e.target.value);
   };
-
+  
   const updatePassword = (e) => {
     setPassword(e.target.value);
   };
-
+  
   const updateRepeatPassword = (e) => {
     setRepeatPassword(e.target.value);
   };
+  // const updateAvatar = (e) => {
+  //   setAvatar(e.target.value);
+  // };
 
   if (user) {
     return <Redirect to='/' />;
   }
-
+  
   return (
     <form onSubmit={onSignUp}>
       <div className='errorMessage'>
@@ -61,6 +76,26 @@ const SignUpForm = () => {
           value={username}
         ></input>
       </div>
+
+      <div>
+        <label>First Name</label>
+        <input
+          type='text'
+          name='first_name'
+          onChange={updateFirstname}
+          value={first_name}
+        ></input>
+      </div>
+      <div>
+        <label>Last Name</label>
+        <input
+          type='text'
+          name='last_name'
+          onChange={updateLastname}
+          value={last_name}
+        ></input>
+      </div>
+      
       <div>
         <label>Email</label>
         <input
@@ -89,6 +124,15 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
+      {/* <div>
+        <label>Avatar - optional</label>
+        <input
+          type='text'
+          name='avatar'
+          onChange={updateAvatar}
+          value={avatar}
+        ></input>
+      </div> */}
       <button type='submit'>Sign Up</button>
     </form>
   );
