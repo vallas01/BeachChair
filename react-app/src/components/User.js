@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import { deleteReview, getReviews } from '../store/review';
 import './UserPage.css'
-
 
 function User() {
   const dispatch = useDispatch()
@@ -62,21 +61,19 @@ function User() {
         </div>
       </div>
       <div className="review-container">
-        <h2 className='user-header' >Your Review</h2>
+        <h2 className='user-header' >Your Reviews</h2>
 
         {reviews && myReview?.map(review => {
           return (
             <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
               <div>
-                  {review.location}
+                <strong>Location reviewed: </strong>
+                {review.location}
               </div>
               <div>
                   {review.text}
               </div>  
-              <div>
-                  {review.id}
-              </div> 
-
+              
               <div>
                 {review.rating === 5 && (
                   <label style={{ cursor: "pointer" }}
@@ -100,6 +97,7 @@ function User() {
                 )}
               </div>
 
+              <NavLink to={`/reviews/${review.id}`} exact={true} activeClassName='active'>Update</NavLink>
               <button onClick={() => deleteThisReview(review.id)}>Delete</button>
 
             </li>
