@@ -9,6 +9,7 @@ function Review() {
   const dispatch = useDispatch();
   const history = useHistory();
   const [errors, setErrors] = useState([]);
+ 
   const [text, setText] = useState('');
   const [rating, setRating] = useState('');
   const [location, setLocation] = useState('');
