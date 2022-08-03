@@ -43,10 +43,15 @@ function User() {
     history.push(`/reviews/${id}`)
   }
 
-  const deleteThisReview = async (id) => {
-    await dispatch(deleteReview(id))
-      .then(() => getReviews())
+  // const deleteThisReview = async (id) => {
+  //   await dispatch(deleteReview(id))
+  //     .then(() => getReviews())
+  // }
+
+  const deleteThisReview = (id) => {
+    dispatch(deleteReview(id))
   }
+
 
   return (
     <>
