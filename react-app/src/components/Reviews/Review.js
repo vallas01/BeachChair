@@ -89,9 +89,9 @@ return (
           onChange={(e) => setLocation(e.target.value)}
         >
           <option value='' disabled  >Which location did you visit?</option>
-          <option value='villano'>Villano Beach</option>
-          <option value='pier'>St Augustine Pier</option>
-          <option value='beachcomb'>Beachcomber Street</option>   
+          <option value='Villano'>Villano Beach</option>
+          <option value='St Augustine Pier'>St Augustine Pier</option>
+          <option value='Beachcomber Street'>Beachcomber Street</option>   
         </select>
 
        
