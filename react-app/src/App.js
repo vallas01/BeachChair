@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
+import Review from './components/Reviews/Review';
 import About from './components/Footer/About';
 import Technology from './components/Footer/Technology';
 import NotFound from './components/NotFound';
@@ -46,6 +47,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
+        </ProtectedRoute>
+        <ProtectedRoute path='/reviews' exact={true} >
+          <Review />
         </ProtectedRoute>
 
         <Route path='/about'>

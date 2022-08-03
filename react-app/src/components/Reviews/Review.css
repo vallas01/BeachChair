@@ -1,0 +1,74 @@
+.error-container {
+color: red;
+display: flex;
+justify-content: center;
+margin: 0px 18px 0px 0px;
+}
+
+#rating-input {
+width: 50px;
+height: 30px;
+}
+
+.star-rating {
+border: solid 1px #ccc;
+display: flex;
+flex-direction: row-reverse;
+font-size: 1.5em;
+justify-content: space-around;
+padding: 0 .2em;
+text-align: center;
+width: 5em;
+}
+
+.star-rating input {
+display: none;
+}
+
+.star-rating label {
+color: #ccc;
+cursor: pointer;
+}
+
+.star-rating :checked~label {
+/* color: #f90; */
+color: #fc0;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label {
+/* color: #fc0; */
+color: #f90;
+}
+
+.star-review {
+color: #fc0;
+font-size: 1.5em;
+}
+
+.empty-stars {
+color: #ccc
+}
+
+.dropList {
+width: 200px;
+height: 30px;
+margin: 5px;
+}
+
+.reviewInput {
+height: 200px;
+background-color: lightblue;       
+    border: 2px solid black;      
+    /* padding: 10px;     */
+    font-size: 20px;    
+}
+
+.demo {
+    width: 300px;
+    min-height: 20px;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid black;
+  }
