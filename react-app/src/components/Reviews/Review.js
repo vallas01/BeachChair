@@ -100,7 +100,7 @@ return (
           type="text"
           placeholder='Enter your review...'
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => setText(e.target.value)}     
           required
         />
 
