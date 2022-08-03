@@ -15,8 +15,13 @@ const NavBar = () => {
   if (sessionUser) {
       sessionLinks = (
         <div className='navUser' >
+
           <div className='navUser-container1'>
             <NavLink to='/users' exact={true} activeClassName='active'>Users</NavLink>
+          </div>
+
+          <div className='navUser-container1'>
+            <NavLink to='/reviews' exact={true} activeClassName='active'>Write a Review</NavLink>
           </div>
           <div className='navUser-container2'>
             <LogoutButton />
