@@ -8,6 +8,7 @@ function User() {
   const dispatch = useDispatch()
   const history = useHistory()
   const [user, setUser] = useState({});
+  const [message, setMessage] = useState([]);
   const {userId}  = useParams();
   const userNum = Number(userId)
   // const sessionUser = useSelector(state => state?.session.user)
@@ -49,7 +50,8 @@ function User() {
   // }
 
   const deleteThisReview = (id) => {
-    dispatch(deleteReview(id))
+    dispatch(deleteReview(id));
+    setMessage(['Revew deleted'])
   }
 
 
@@ -110,6 +112,9 @@ function User() {
 
               <button onClick={() => handleUpdate(review.id)}>Update</button>
               <button onClick={() => deleteThisReview(review.id)}>Delete</button>
+              {message && (
+                <div className='error-container'>{message}</div>
+              )}
               <hr className='list'></hr>
             </li>
           )
