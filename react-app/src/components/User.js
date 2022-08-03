@@ -66,7 +66,7 @@ function User() {
 
         {reviews && myReview?.map(review => {
           return (
-            <li className='review-info' key={review.id}>
+            <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
               <div>
                   {review.location}
               </div>

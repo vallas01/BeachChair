@@ -57,18 +57,9 @@ margin: 5px;
 }
 
 .reviewInput {
-height: 200px;
-background-color: lightblue;       
-    border: 2px solid black;      
-    /* padding: 10px;     */
-    font-size: 20px;    
+height: 80px;
+background-color: lightyellow;       
+border: 2px solid black;      
+font-size: 18px;    
 }
 
-.demo {
-    width: 300px;
-    min-height: 20px;
-    max-height: 300px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    border: 1px solid black;
-  }
