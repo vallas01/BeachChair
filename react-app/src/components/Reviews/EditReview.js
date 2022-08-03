@@ -18,12 +18,9 @@ function EditReview() {
   const reviews = Object.values(useSelector(state => state.review))
   const review = reviews?.filter(review => review?.id === Number(reviewId))
 
-
-  console.log('test1',Number(reviewId))
-  console.log('test2',reviews)
-  console.log('test3',review)
-
-
+//   console.log('test1',Number(reviewId))
+//   console.log('test2',reviews)
+//   console.log('test3',review)
 
   useEffect(() => {
     dispatch(getReviews())
@@ -59,7 +56,7 @@ function EditReview() {
 
 return (
     <>
-      <h1> Set Up Your Review </h1>
+      <h1 className='review-title'> Edit Your Review </h1>
 
       <div className='error-container'>
         {errors.length > 0 && (
@@ -75,7 +72,7 @@ return (
       <form onSubmit={handleSubmit} className="review-form">
 
         <label>
-          Enter your review information...
+          This review was for... {review[0].location}
         </label>
 
 
@@ -98,12 +95,12 @@ return (
         </div>
 
         <select
-          className='dropList'
+          className='dropListEdit'
           value={location}
           required
           onChange={(e) => setLocation(e.target.value)}
         >
-          <option value='' disabled  >Which location did you visit?</option>
+          <option value='' disabled  >Did you want to change the location?</option>
           <option value='Villano'>Villano Beach</option>
           <option value='St Augustine Pier'>St Augustine Pier</option>
           <option value='Beachcomber Street'>Beachcomber Street</option>   
@@ -113,7 +110,7 @@ return (
         <input
           className='reviewInput'
           type="text"
-          placeholder={'fix this...'}
+          placeholder={review[0].text}
           value={text}
           onChange={(e) => setText(e.target.value)}     
           required

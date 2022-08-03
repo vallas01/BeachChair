@@ -5,6 +5,10 @@ justify-content: center;
 margin: 0px 18px 0px 0px;
 }
 
+.review-title {
+    text-align: center;
+}
+
 #rating-input {
 width: 50px;
 height: 30px;
@@ -52,6 +56,11 @@ color: #ccc
 
 .dropList {
 width: 200px;
+height: 30px;
+margin: 5px;
+}
+.dropListEdit {
+width: 245px;
 height: 30px;
 margin: 5px;
 }

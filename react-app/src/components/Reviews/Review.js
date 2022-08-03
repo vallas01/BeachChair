@@ -44,7 +44,7 @@ function Review() {
 
 return (
     <>
-      <h1> Set Up Your Review </h1>
+      <h1 className='review-title'> Set Up Your Review </h1>
 
       <div className='error-container'>
         {errors.length > 0 && (
