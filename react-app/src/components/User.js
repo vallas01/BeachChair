@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { deleteReview, getReviews } from '../store/review';
 import './UserPage.css'
 
 
 function User() {
+  const dispatch = useDispatch()
   const [user, setUser] = useState({});
-  const { userId }  = useParams();
+  const {userId}  = useParams();
+  const userNum = Number(userId)
+  // const sessionUser = useSelector(state => state?.session.user)
+  const reviews = Object.values(useSelector(state => state?.review))
+ 
+
+  const myReview = reviews?.filter(function(review){
+    return review.user_id === userNum;
+  })
+
+ 
+  useEffect(() => {
+    dispatch(getReviews());
+  },[dispatch])
 
   useEffect(() => {
     if (!userId) {
@@ -20,6 +36,11 @@ function User() {
 
   if (!user) {
     return null;
+  }
+
+  const deleteThisReview = async (id) => {
+    await dispatch(deleteReview(id))
+      .then(() => getReviews())
   }
 
   return (
@@ -37,16 +58,55 @@ function User() {
             <strong> Last Name: <span style={{ fontWeight: "normal" }}>{user.last_name} </span></strong>
             <strong>Email: <span style={{ fontWeight: "normal" }}>{user.email} </span> </strong>
           </div>
-
-          {/* {sessionUser && sessionUser.id === user.id && <UserUpdateForm user={user} />} */}
+          
         </div>
       </div>
       <div className="review-container">
         <h2 className='user-header' >Your Review</h2>
-        
-        <div className='review-details'>
-        </div>
-        
+
+        {reviews && myReview?.map(review => {
+          return (
+            <li className='review-info' key={review.id}>
+              <div>
+                  {review.location}
+              </div>
+              <div>
+                  {review.text}
+              </div>  
+              <div>
+                  {review.id}
+              </div> 
+
+              <div>
+                {review.rating === 5 && (
+                  <label style={{ cursor: "pointer" }}
+                    className="star-review">&#9733; &#9733; &#9733; &#9733; &#9733;</label>
+                )}
+                {review.rating === 4 && (
+                  <label style={{ cursor: "pointer" }}
+                    className="star-review">&#9733; &#9733; &#9733; &#9733; <span className="empty-stars">&#9733;</span> </label>
+                )}
+                {review.rating === 3 && (
+                  <label style={{ cursor: "pointer" }}
+                    className="star-review">&#9733; &#9733; &#9733; <span className="empty-stars">&#9733; &#9733;</span></label>
+                )}
+                {review.rating === 2 && (
+                  <label style={{ cursor: "pointer" }}
+                    className="star-review">&#9733; &#9733; <span className="empty-stars">&#9733; &#9733; &#9733;</span></label>
+                )}
+                {review.rating === 1 && (
+                  <label style={{ cursor: "pointer" }}
+                    className="star-review">&#9733; <span className="empty-stars">&#9733; &#9733; &#9733; &#9733;</span> </label>
+                )}
+              </div>
+
+              <button onClick={() => deleteThisReview(review.id)}>Delete</button>
+
+            </li>
+          )
+        })}
+
+
       </div>
     </>
   );
