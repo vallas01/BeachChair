@@ -55,7 +55,7 @@ function User() {
         
         <div className='user-header-details'>
 
-          <img src={user.avatar} style={{ height: '250px', width: 'auto' }} alt='avatar' />
+          <img src={'https://res.cloudinary.com/kelp-me/image/upload/v1659139522/default-profile_w8hf54.png'} style={{ height: '250px', width: 'auto' }} alt='avatar' />
 
           <div className='user-info'>
             <strong>Username: <span style={{ fontWeight: "normal" }}>{user.username} </span></strong>

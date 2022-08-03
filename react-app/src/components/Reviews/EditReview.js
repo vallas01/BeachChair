@@ -100,7 +100,7 @@ return (
           required
           onChange={(e) => setLocation(e.target.value)}
         >
-          <option value='' disabled  >Did you want to change the location?</option>
+          <option value='' disabled  >Please confirm the location...</option>
           <option value='Villano'>Villano Beach</option>
           <option value='St Augustine Pier'>St Augustine Pier</option>
           <option value='Beachcomber Street'>Beachcomber Street</option>   

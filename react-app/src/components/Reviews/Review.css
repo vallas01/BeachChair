@@ -54,21 +54,17 @@ font-size: 1.5em;
 color: #ccc
 }
 
-.dropList {
+.dropList, .dropListEdit {
 width: 200px;
 height: 30px;
 margin: 5px;
 }
-.dropListEdit {
-width: 245px;
-height: 30px;
-margin: 5px;
-}
+
 
 .reviewInput {
-height: 80px;
+height: 60px;
 background-color: lightyellow;       
 border: 2px solid black;      
-font-size: 18px;    
+font-size: 16px;    
 }
 
