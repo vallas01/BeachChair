@@ -30,7 +30,7 @@ function Review() {
       text,
       rating
     };
-console.log('newReview====',newReview)
+    
     dispatch(createReview(newReview))
     .then(() => history.push(`/users/${user.id}`))
     .catch(async (res) => {
@@ -38,7 +38,7 @@ console.log('newReview====',newReview)
         if (data && data.errors) setErrors(data.errors);
     });
     // reset();
-}
+  }
 
 
 
