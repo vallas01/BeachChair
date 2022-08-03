@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { deleteReview, getReviews } from '../store/review';
 import './UserPage.css'
 
 function User() {
   const dispatch = useDispatch()
+  const history = useHistory()
   const [user, setUser] = useState({});
   const {userId}  = useParams();
   const userNum = Number(userId)
@@ -35,6 +36,11 @@ function User() {
 
   if (!user) {
     return null;
+  }
+
+
+  const handleUpdate = async (id) => {
+    history.push(`/reviews/${id}`)
   }
 
   const deleteThisReview = async (id) => {
@@ -97,9 +103,9 @@ function User() {
                 )}
               </div>
 
-              <NavLink to={`/reviews/${review.id}`} exact={true} activeClassName='active'>Update</NavLink>
+              <button onClick={() => handleUpdate(review.id)}>Update</button>
               <button onClick={() => deleteThisReview(review.id)}>Delete</button>
-
+              <hr className='list'></hr>
             </li>
           )
         })}
