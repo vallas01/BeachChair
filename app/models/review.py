@@ -16,8 +16,7 @@ class Review(db.Model):
         return {
             "id": self.id,
             "user_id": self.user_id,
-            "restaurant_id": self.restaurant_id,
             "text": self.text,
+            "location": self.location,
             "rating": self.rating,
-            "owner":self.users.to_dict(),
         }

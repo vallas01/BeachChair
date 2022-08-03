@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './UserPage.css'
+
 
 function User() {
   const [user, setUser] = useState({});
@@ -21,26 +23,32 @@ function User() {
   }
 
   return (
-    <ul>
-      <li>
-        <strong>User Id</strong> {userId}
-      </li>
-      <li>
-        <strong>Username</strong> {user.username}
-      </li>
-      <li>
-        <strong>First Name</strong> {user.first_name}
-      </li>
-      <li>
-        <strong>Last Name</strong> {user.last_name}
-      </li>
-      <li>
-        <strong>Email</strong> {user.email}
-      </li>
-      <li>
-        <strong>Avatar</strong> {user.avatar}
-      </li>
-    </ul>
+    <>
+      <div className="user-container">
+        <h2 className='user-header' >User Details</h2>
+        
+        <div className='user-header-details'>
+
+          <img src={user.avatar} style={{ height: '250px', width: 'auto' }} alt='avatar' />
+
+          <div className='user-info'>
+            <strong>Username: <span style={{ fontWeight: "normal" }}>{user.username} </span></strong>
+            <strong>First Name: <span style={{ fontWeight: "normal" }}>{user.first_name} </span></strong>
+            <strong> Last Name: <span style={{ fontWeight: "normal" }}>{user.last_name} </span></strong>
+            <strong>Email: <span style={{ fontWeight: "normal" }}>{user.email} </span> </strong>
+          </div>
+
+          {/* {sessionUser && sessionUser.id === user.id && <UserUpdateForm user={user} />} */}
+        </div>
+      </div>
+      <div className="review-container">
+        <h2 className='user-header' >Your Review</h2>
+        
+        <div className='review-details'>
+        </div>
+        
+      </div>
+    </>
   );
 }
 export default User;

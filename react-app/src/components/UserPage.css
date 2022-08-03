@@ -1,0 +1,22 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-header {
+    color: rgb(0,64,128);
+    display: flex;
+    justify-content: center;
+}
+
+
+.user-header-details {
+    display: flex;
+}
+
+.user-info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
