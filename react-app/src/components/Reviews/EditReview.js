@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import { updateReviewDetails } from '../../store/review'
+import { updateReviewDetails, getReviews } from '../../store/review'
 import './Review.css'
 
 
@@ -12,10 +12,25 @@ function EditReview() {
   const [text, setText] = useState('');
   const [rating, setRating] = useState('');
   const [location, setLocation] = useState('');
-  const { reviewId } = useParams
+  const { reviewId } = useParams()
+// eslint-disable-next-line
   const user = useSelector(state => state.session.user)
+  const reviews = Object.values(useSelector(state => state.review))
+  const review = reviews?.filter(review => review?.id === Number(reviewId))
+
+
+  console.log('test1',Number(reviewId))
+  console.log('test2',reviews)
+  console.log('test3',review)
+
+
+
+  useEffect(() => {
+    dispatch(getReviews())
+  }, [dispatch]);
   
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
@@ -25,14 +40,14 @@ function EditReview() {
     }
 
     const newReview = {
-      user_id: user.id,
+      user_id: review[0].user_id,
       location, 
       text,
-      rating
+      rating: Number(rating)
     };
     
     dispatch(updateReviewDetails(newReview, reviewId))
-    .then(() => history.push(`/users/${user.id}`))
+    .then(() => history.push(`/users/${review[0].user_id}`))
     .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
@@ -98,7 +113,7 @@ return (
         <input
           className='reviewInput'
           type="text"
-          placeholder='Enter your review...'
+          placeholder={'fix this...'}
           value={text}
           onChange={(e) => setText(e.target.value)}     
           required
