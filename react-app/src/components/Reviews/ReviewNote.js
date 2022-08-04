@@ -17,9 +17,7 @@ function ReviewNote() {
     const myReview = reviews?.filter(function(review){
         return review.id === userNum;
     })
-    console.log('test1',myReview)
-    console.log('test2',userNum)
-    console.log('test3',reviews)
+   
     // const [, updateState] = React.useState();
     // const forceUpdate = React.useCallback(() => updateState({}), []);
 
