@@ -22,7 +22,7 @@ function User() {
  
   useEffect(() => {
     dispatch(getReviews());
-  },[dispatch, message])
+  },[dispatch])
 
   useEffect(() => {
     if (!userId) {
@@ -47,7 +47,8 @@ function User() {
   const deleteThisReview = async (id) => {
     await dispatch(deleteReview(id))
       .then(() => getReviews());
-      setMessage(['Review deleted'])
+      setMessage(['Review deleted']);
+      history.push(`/users/${userId}`)
   }
 
   // const deleteThisReview = (id) => {
