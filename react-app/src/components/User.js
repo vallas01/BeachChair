@@ -22,7 +22,7 @@ function User() {
  
   useEffect(() => {
     dispatch(getReviews());
-  },[dispatch])
+  },[dispatch, message])
 
   useEffect(() => {
     if (!userId) {
