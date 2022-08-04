@@ -70,10 +70,16 @@ export const deleteReview = (reviewId) => async dispatch => {
   const response = await fetch(`/api/review/${reviewId}`, {
     method: 'DELETE',
   })
+
   if (response.ok) {
-    const allReviews = await response.json();
-    dispatch(removeReview(allReviews));
-    return 'review deleted';
+    const data = await response.json();
+    if (data.message === 'success') {
+      dispatch(removeReview(reviewId));
+    }
+    
+    console.log('Delete thunk ===>',data)
+    
+    return
   }
 };
 
@@ -106,7 +112,9 @@ const reviewReducer = (state = initialState, action) => {
 
     case REMOVE_REVIEW: {
       newState = { ...state }
-      delete newState[action.id.id]
+      console.log('newState1====',newState)
+      delete newState[action.id]
+      console.log('newState2====',newState)
       return newState
     }
 
