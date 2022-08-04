@@ -11,7 +11,15 @@ function ReviewNote() {
     const {userId} = useParams()
     console.log('test1',userId)
     const [del, setDel] = useState([])
- 
+
+    const userNum = Number(userId)
+    const reviews = Object.values(useSelector(state => state?.review))
+    const myReview = reviews?.filter(function(review){
+        return review.id === userNum;
+    })
+    console.log('test1',myReview)
+    console.log('test2',userNum)
+    console.log('test3',reviews)
     // const [, updateState] = React.useState();
     // const forceUpdate = React.useCallback(() => updateState({}), []);
 
@@ -38,7 +46,8 @@ function ReviewNote() {
     return (
 
         <div className="review-container">
-                <h2 className='user-header' >Are You Sure You Want To Delete This Review</h2>
+                <h2 className='user-header' >Are You Sure You Want To Delete This Review For</h2>
+                {myReview[0] && (<h2 className='user-header' >{myReview[0].location}</h2>)}
                 <button onClick={() => handleContinue()}>No</button>
                 <button onClick={() => deleteThisReview(userId)}>Yes</button>
         </div>
