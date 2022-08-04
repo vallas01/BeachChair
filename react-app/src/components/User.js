@@ -14,11 +14,14 @@ function User() {
   // const sessionUser = useSelector(state => state?.session.user)
   const reviews = Object.values(useSelector(state => state?.review))
  
-
+  
+  
   const myReview = reviews?.filter(function(review){
     return review.user_id === userNum;
   })
-
+  console.log('TEST1',reviews)
+  console.log('TEST2',myReview)
+  
   const handleUpdate = async (id) => {
     history.push(`/reviews/${id}`)
   }
