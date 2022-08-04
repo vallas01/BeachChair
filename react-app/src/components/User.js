@@ -44,15 +44,15 @@ function User() {
     history.push(`/reviews/${id}`)
   }
 
-  // const deleteThisReview = async (id) => {
-  //   await dispatch(deleteReview(id))
-  //     .then(() => getReviews())
-  // }
-
-  const deleteThisReview = (id) => {
-    dispatch(deleteReview(id));
-    setMessage(['Revew deleted'])
+  const deleteThisReview = async (id) => {
+    await dispatch(deleteReview(id))
+      .then(() => getReviews());
+      setMessage(['Review deleted'])
   }
+
+  // const deleteThisReview = (id) => {
+  //   dispatch(deleteReview(id));
+  // }
 
 
   return (
@@ -78,6 +78,7 @@ function User() {
 
         {reviews && myReview?.map(review => {
           return (
+          <>
             <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
               <div>
                 <strong>Location reviewed: </strong>
@@ -112,16 +113,17 @@ function User() {
 
               <button onClick={() => handleUpdate(review.id)}>Update</button>
               <button onClick={() => deleteThisReview(review.id)}>Delete</button>
-              {message && (
-                <div className='error-container'>{message}</div>
-              )}
               <hr className='list'></hr>
             </li>
+          </>
           )
         })}
-
-
       </div>
+
+        {message && (
+          <div className='error-container'>{message}</div>
+        )}
+
     </>
   );
 }
