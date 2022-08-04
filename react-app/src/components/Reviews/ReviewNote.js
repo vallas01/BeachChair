@@ -11,6 +11,8 @@ function ReviewNote() {
     const {userId} = useParams()
     console.log('test1',userId)
 
+    const [, updateState] = React.useState();
+    const forceUpdate = React.useCallback(() => updateState({}), []);
 
     useEffect(() => {
         dispatch(getReviews());
@@ -24,6 +26,7 @@ function ReviewNote() {
     const deleteThisReview = async (id) => {
         await dispatch(deleteReview(id))
         .then(() => getReviews());
+        forceUpdate();
         history.push(`/users/${user.id}`)
       }
     
