@@ -19,6 +19,15 @@ function User() {
     return review.user_id === userNum;
   })
 
+  const handleUpdate = async (id) => {
+    history.push(`/reviews/${id}`)
+  }
+  
+  
+  const deleteThisReview = async (id) => {
+    setMessage(['Review deleted']);
+    history.push(`/note/${id}`)
+  }
   
   useEffect(() => {
     dispatch(getReviews());
@@ -40,18 +49,9 @@ function User() {
   }
   
   
-  const handleUpdate = async (id) => {
-    history.push(`/reviews/${id}`)
-  }
   
- 
-  const deleteThisReview = async (id) => {
-      setMessage(['Review deleted']);
-      history.push(`/note/${id}`)
-  }
-
   
-
+  
   return (
     <>
       <div className="user-container">

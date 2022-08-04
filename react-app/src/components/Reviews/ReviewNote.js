@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { deleteReview, getReviews } from '../../store/review';
@@ -10,6 +10,12 @@ function ReviewNote() {
     const user = useSelector(state => state.session.user)
     const {userId} = useParams()
     console.log('test1',userId)
+
+
+    useEffect(() => {
+        dispatch(getReviews());
+    },[dispatch])
+
 
     const handleContinue = () => {
         history.push(`/users/${user.id}`)
