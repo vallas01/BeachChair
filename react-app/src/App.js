@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import Home from './components/Home';
 import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
 import NavBar from './components/NavBar';
@@ -8,6 +9,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import Review from './components/Reviews/Review';
+import Reservation from './components/Reservations/Reservation';
 import EditReview from './components/Reviews/EditReview';
 import About from './components/Footer/About';
 import Technology from './components/Footer/Technology';
@@ -36,7 +38,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route path='/' exact={true} >
-          <h1>My Home Page</h1>
+          <Home />
         </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
@@ -55,6 +57,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/reviews/:reviewId' exact={true} >
           <EditReview />
+        </ProtectedRoute>
+        <ProtectedRoute path='/reservation' exact={true} >
+          <Reservation />
         </ProtectedRoute>
 
         <Route path='/about'>
