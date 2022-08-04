@@ -57,11 +57,10 @@ def delete_post(id):
     """
     Deletes a review (ACV)
     """
-
-    review = Review.query.get(id)
+    review = Review.query.get(int(id))
     db.session.delete(review)
     db.session.commit()
-    return review.to_dict_2()
+    return {'message': 'success'}
 
 @review_routes.route('/<id>', methods=['PUT'])
 def edit_post(id):
