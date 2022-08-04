@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { deleteReview, getReviews } from '../../store/review';
@@ -10,9 +10,10 @@ function ReviewNote() {
     const user = useSelector(state => state.session.user)
     const {userId} = useParams()
     console.log('test1',userId)
-
-    const [, updateState] = React.useState();
-    const forceUpdate = React.useCallback(() => updateState({}), []);
+    const [del, setDel] = useState([])
+ 
+    // const [, updateState] = React.useState();
+    // const forceUpdate = React.useCallback(() => updateState({}), []);
 
     useEffect(() => {
         dispatch(getReviews());
@@ -23,10 +24,12 @@ function ReviewNote() {
         history.push(`/users/${user.id}`)
     }
 
+    // window.location.reload(false);
     const deleteThisReview = async (id) => {
+        setDel([...del, 1])
         await dispatch(deleteReview(id))
         .then(() => getReviews());
-        forceUpdate();
+        // forceUpdate();
         history.push(`/users/${user.id}`)
       }
     
