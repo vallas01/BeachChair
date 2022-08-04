@@ -76,9 +76,7 @@ export const deleteReview = (reviewId) => async dispatch => {
     if (data.message === 'success') {
       dispatch(removeReview(reviewId));
     }
-    
-    console.log('Delete thunk ===>',data)
-    
+            
     return
   }
 };

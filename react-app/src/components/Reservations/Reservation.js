@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import './Reservation.css'
-
+import { createReservation } from '../../store/reservation'
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 function Reservation() {
-    const [location, setLocation] = useState()
+    const history = useHistory()
+    const dispatch = useDispatch()
+    const [location, setLocation] = useState('')
     const [errors, setErrors] = useState([])
-    const [arrangement, setArrangement] = useState()
+    const [arrangement, setArrangement] = useState('')
     const [date, setDate] = useState()
 
+    const user = useSelector(state => state.session.user)
+ 
     let today = new Date()
     let d1Int = today.getDate() + 1;
     let d1 = d1Int < 10 ? '0' + d1Int.toString() : d1Int.toString()
@@ -25,7 +31,23 @@ function Reservation() {
 
         if (!date) {
             return setErrors(['Please pick your beach day'])
-          }
+        }
+        const newReservation = {
+            user_id: user.id,
+            location, 
+            date,
+            arrangement
+          };
+
+          console.log('newReservation===',newReservation)
+
+          dispatch(createReservation(newReservation))
+          .then(() => history.push(`/users/${user.id}`))
+          .catch(async (res) => {
+              const data = await res.json();
+              if (data && data.errors) setErrors(data.errors);
+          });
+          // reset();
     }
 
 
@@ -74,9 +96,9 @@ function Reservation() {
                     onChange={(e) => setArrangement(e.target.value)}
                 >
                     <option value='' disabled  >Which set up do you want?</option>
-                    <option value='1'>Basic</option>
-                    <option value='2'>Family</option>
-                    <option value='3'>Friends and Family</option>   
+                    <option value={1}>Basic</option>
+                    <option value={2}>Family</option>
+                    <option value={3}>Friends and Family</option>   
                 </select>
 
                 <button className='bookBtn' type="submit">Let's Do It</button>
