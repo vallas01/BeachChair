@@ -34,7 +34,7 @@ function ReviewNote() {
     const deleteThisReview = async (id) => {
         setDel([...del, 1])
         await dispatch(deleteReview(id))
-        .then(() => getReviews());
+        await dispatch(getReviews());
         // forceUpdate();
         history.push(`/users/${user.id}`)
       }
