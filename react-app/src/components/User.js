@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
-import { deleteReview, getReviews } from '../store/review';
+import { getReviews } from '../store/review';
 import './UserPage.css'
 
 function User() {
@@ -19,11 +19,11 @@ function User() {
     return review.user_id === userNum;
   })
 
- 
+  
   useEffect(() => {
     dispatch(getReviews());
   },[dispatch])
-
+  
   useEffect(() => {
     if (!userId) {
       return;
@@ -34,27 +34,23 @@ function User() {
       setUser(user);
     })();
   }, [userId]);
-
+  
   if (!user) {
     return null;
   }
-
-
+  
+  
   const handleUpdate = async (id) => {
     history.push(`/reviews/${id}`)
   }
-
+  
+ 
   const deleteThisReview = async (id) => {
-    await dispatch(deleteReview(id))
-      .then(() => getReviews());
       setMessage(['Review deleted']);
-      history.push(`/users/${userId}`)
+      history.push(`/note/${id}`)
   }
 
-  // const deleteThisReview = (id) => {
-  //   dispatch(deleteReview(id));
-  // }
-
+  
 
   return (
     <>
@@ -74,12 +70,11 @@ function User() {
           
         </div>
       </div>
+
       <div className="review-container">
         <h2 className='user-header' >Your Reviews</h2>
-
         {reviews && myReview?.map(review => {
           return (
-          <>
             <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
               <div>
                 <strong>Location reviewed: </strong>
@@ -116,7 +111,6 @@ function User() {
               <button onClick={() => deleteThisReview(review.id)}>Delete</button>
               <hr className='list'></hr>
             </li>
-          </>
           )
         })}
       </div>
