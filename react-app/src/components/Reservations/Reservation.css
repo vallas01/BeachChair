@@ -3,3 +3,9 @@
     display: flex;
     justify-content: center;
 }
+
+.dropList, .dropListEdit {
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+    }

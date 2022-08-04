@@ -96,7 +96,7 @@ return (
         </select>
 
        
-        <input
+        <textarea
           className='reviewInput'
           type="text"
           placeholder='Enter your review...'

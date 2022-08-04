@@ -18,9 +18,6 @@ function EditReview() {
   const reviews = Object.values(useSelector(state => state.review))
   const review = reviews?.filter(review => review?.id === Number(reviewId))
 
-//   console.log('test1',Number(reviewId))
-//   console.log('test2',reviews)
-//   console.log('test3',review)
 
   useEffect(() => {
     dispatch(getReviews())
@@ -107,7 +104,7 @@ return (
         </select>
 
        
-        <input
+        <textarea
           className='reviewInput'
           type="text"
           placeholder={review[0].text}
