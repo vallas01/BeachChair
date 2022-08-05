@@ -12,7 +12,7 @@ function Home() {
             <h2 className="user-header">Welcome to the Home Page!</h2>
             <div className="home-container">
                 {sessionUser && (
-                    <NavLink className="navBtn" to="/reservation">Set up my Beach Chair!</NavLink>
+                    <NavLink className="navBtn" to="/reservation">Let's Do It!</NavLink>
                 )}
                 {!sessionUser && (
                     <NavLink className="navBtn" to="/login">Set up my Beach Chair!</NavLink>

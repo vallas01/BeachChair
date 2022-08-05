@@ -5,6 +5,10 @@ justify-content: center;
 margin: 0px 18px 0px 0px;
 }
 
+.error-container ul {
+    list-style: none;
+}
+
 .review-title {
     text-align: center;
 }
