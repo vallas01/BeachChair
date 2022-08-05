@@ -16,30 +16,27 @@ const NavBar = () => {
       sessionLinks = (
         <div className='navUser' >
 
-          <div className='navUser-container1'>
+          {/* <div className='navUser-container1'>
             <NavLink to='/users' exact={true} activeClassName='active'>Users</NavLink>
-          </div>
+          </div> */}
 
           <div className='navUser-container1'>
             <NavLink to='/reviews' exact={true} activeClassName='active'>Write a Review</NavLink>
           </div>
+
           <div className='navUser-container2'>
           </div>
 
           <div className="dropdown">
             <button id="logout" className="dropbtn">
-              
               <img src={'https://res.cloudinary.com/kelp-me/image/upload/v1659139522/default-profile_w8hf54.png'} width='40px' height='40px' alt='somephoto'></img>
             </button>
             <div className="dropdown-content">
-              {/* <NavLink className="navBtn" to="/account">My Account</NavLink>
-              <NavLink className="navBtn" to="/about">About me</NavLink>
-            <NavLink onClick={logout} className="navBtn" to="/">Log out</NavLink> */}
               <NavLink to={`/users/${sessionUser.id}`} exact={true} activeClassName='active'>Account</NavLink>
               <LogoutButton />
-            
             </div>
-            </div>
+          </div>
+
         </div>
 
       )
@@ -65,6 +62,7 @@ const NavBar = () => {
         </NavLink>
         <img className='imgLogo' src='https://res.cloudinary.com/kelp-me/image/upload/v1659468423/jimmy-buffet-clipart-3_czg79p.gif' alt='parrot'></img>
       </div>
+      
         {sessionLinks}
   
     </nav>
