@@ -106,6 +106,9 @@ console.log(date)
                 <button className='bookBtn' type="submit">Let's Do It</button>
       
             </form>
+            <div className="beachChair">
+                <img src='https://res.cloudinary.com/kelp-me/image/upload/v1659721920/beach-chairs_uuptre.jpg' alt='beachchairs'></img>
+            </div>
         </>
     )
 }

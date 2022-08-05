@@ -29,10 +29,10 @@ function EditReview() {
     e.preventDefault();
     setErrors([]);
 
-    if (!rating) {
-      return setErrors(['You must enter at least one star ! ! !'])
+    if (text.length < 5) {
+      return setErrors(['Can you leave at least 5 characters?'])
     }
-
+    
     const newReview = {
       user_id: review[0].user_id,
       location, 

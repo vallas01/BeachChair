@@ -13,3 +13,8 @@
 .reservation-title {
     text-align: center;
 }
+
+.beachChair {
+    display: flex;
+    justify-content: center;
+}

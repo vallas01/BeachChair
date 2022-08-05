@@ -21,8 +21,8 @@ function Review() {
     e.preventDefault();
     setErrors([]);
 
-    if (!rating) {
-      return setErrors(['You must enter at least one star ! ! !'])
+    if (text.length < 5) {
+      return setErrors(['Can you leave at least 5 characters?'])
     }
 
     const newReview = {
