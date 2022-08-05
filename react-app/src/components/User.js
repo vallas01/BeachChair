@@ -16,9 +16,10 @@ function User() {
   const reviews = Object.values(useSelector(state => state?.review))
   const reservations = Object.values(useSelector(state => state?.reservation))
  
-  const myReview = reviews?.filter(function(review){
+  const myReviewUnordered = reviews?.filter(function(review){
     return review.user_id === userNum;
   })
+  const myReview = myReviewUnordered.reverse()
   
   const myReservation = reservations?.filter(function(reservation){
     return reservation.user_id === userNum;

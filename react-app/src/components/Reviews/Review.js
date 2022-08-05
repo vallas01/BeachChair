@@ -21,8 +21,14 @@ function Review() {
     e.preventDefault();
     setErrors([]);
 
+    if (rating < 1) {
+      return setErrors(['Can you leave at least 1 star?'])
+    }
     if (text.length < 5) {
       return setErrors(['Can you leave at least 5 characters?'])
+    }
+    if (text.length > 240) {
+      return setErrors(['Can you limit your review to 240 characters?'])
     }
 
     const newReview = {
@@ -91,7 +97,7 @@ return (
           onChange={(e) => setLocation(e.target.value)}
         >
           <option value='' disabled  >Which location did you visit?</option>
-          <option value='Villano'>Villano Beach</option>
+          <option value='Villano Beach'>Villano Beach</option>
           <option value='St Augustine Pier'>St Augustine Pier</option>
           <option value='Beachcomber Street'>Beachcomber Street</option>   
         </select>
