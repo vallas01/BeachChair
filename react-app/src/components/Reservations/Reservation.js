@@ -10,7 +10,7 @@ function Reservation() {
     const [location, setLocation] = useState('')
     const [errors, setErrors] = useState([])
     const [arrangement, setArrangement] = useState('')
-    const [date, setDate] = useState()
+    const [date, setDate] = useState('')
 
     const user = useSelector(state => state.session.user)
  
@@ -22,13 +22,14 @@ function Reservation() {
     let m = mInt < 10 ? '0' + mInt.toString() : mInt.toString()
 
     let yearInt = today.getFullYear()
-    // let yearMax = yearInt + 1;
+    let yearMax = yearInt + 1;
     let y = yearInt.toString();
+    let yMax = yearMax.toString();
    
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-
+console.log(date)
         if (!date) {
             return setErrors(['Please pick your beach day'])
         }
@@ -73,6 +74,7 @@ function Reservation() {
                     placeholder='start date...'
                     value={date}
                     min={`${y}-${m}-${d1}`}
+                    max={`${yMax}-${m}-${d1}`}
                     onChange={(e) => setDate(e.target.value)}
                     required
                 />
@@ -83,8 +85,8 @@ function Reservation() {
                     required
                     onChange={(e) => setLocation(e.target.value)}
                 >
-                    <option value='' disabled  >Which location did you visit?</option>
-                    <option value='Villano'>Villano Beach</option>
+                    <option value='' disabled  >Which beach are you visiting?</option>
+                    <option value='Villano Beach'>Villano Beach</option>
                     <option value='St Augustine Pier'>St Augustine Pier</option>
                     <option value='Beachcomber Street'>Beachcomber Street</option>   
                 </select>
@@ -96,9 +98,9 @@ function Reservation() {
                     onChange={(e) => setArrangement(e.target.value)}
                 >
                     <option value='' disabled  >Which set up do you want?</option>
-                    <option value={1}>Basic</option>
-                    <option value={2}>Family</option>
-                    <option value={3}>Friends and Family</option>   
+                    <option value={1}>#1 - Basic</option>
+                    <option value={2}>#2 - Family</option>
+                    <option value={3}>#3 - Friends and Family</option>   
                 </select>
 
                 <button className='bookBtn' type="submit">Let's Do It</button>

@@ -8,4 +8,8 @@
     width: 200px;
     height: 30px;
     margin: 5px;
-    }
+}
+
+.reservation-title {
+    text-align: center;
+}

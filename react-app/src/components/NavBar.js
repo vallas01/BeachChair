@@ -23,6 +23,9 @@ const NavBar = () => {
           <div className='navUser-container1'>
             <NavLink to='/reviews' exact={true} activeClassName='active'>Write a Review</NavLink>
           </div>
+          <div className='navUser-container1'>
+            <NavLink to='/reservation' exact={true} activeClassName='active'>Set Up a Beach Chair</NavLink>
+          </div>
 
           <div className='navUser-container2'>
           </div>
@@ -62,7 +65,7 @@ const NavBar = () => {
         </NavLink>
         <img className='imgLogo' src='https://res.cloudinary.com/kelp-me/image/upload/v1659468423/jimmy-buffet-clipart-3_czg79p.gif' alt='parrot'></img>
       </div>
-      
+
         {sessionLinks}
   
     </nav>
