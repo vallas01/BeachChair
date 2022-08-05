@@ -93,7 +93,7 @@ const reservationReducer = (state = initialState, action) => {
 
     case LIST_RESERVATIONS: {
       newState = { ...state }
-      action.list.Reservation.forEach(reservation => newState[reservation.id] = reservation)
+      action.list.reservation.forEach(reservation => newState[reservation.id] = reservation)
       return newState
     }
 

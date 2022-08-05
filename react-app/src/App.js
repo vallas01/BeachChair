@@ -16,6 +16,7 @@ import Technology from './components/Footer/Technology';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer/Footer';
 import ReviewNote from './components/Reviews/ReviewNote';
+import ReservationNote from './components/Reservations/ReservationNote';
 import { authenticate } from './store/session';
 
 function App() {
@@ -70,6 +71,9 @@ function App() {
         </Route>
         <Route path='/note/:userId'>
           <ReviewNote />
+        </Route>
+        <Route path='/reservation/:userId'>
+          <ReservationNote />
         </Route>
 
         <Route path=''>

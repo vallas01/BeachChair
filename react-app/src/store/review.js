@@ -110,9 +110,7 @@ const reviewReducer = (state = initialState, action) => {
 
     case REMOVE_REVIEW: {
       newState = { ...state }
-      console.log('newState1====',newState)
       delete newState[action.id]
-      console.log('newState2====',newState)
       return newState
     }
 

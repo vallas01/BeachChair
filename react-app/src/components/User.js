@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import { getReviews } from '../store/review';
+import { getReservations } from '../store/reservation'
 import './UserPage.css'
 
 function User() {
@@ -13,14 +14,18 @@ function User() {
   const userNum = Number(userId)
   // const sessionUser = useSelector(state => state?.session.user)
   const reviews = Object.values(useSelector(state => state?.review))
+  const reservations = Object.values(useSelector(state => state?.reservation))
  
-  
-  
   const myReview = reviews?.filter(function(review){
     return review.user_id === userNum;
   })
-  console.log('TEST1',reviews)
-  console.log('TEST2',myReview)
+  
+  const myReservation = reservations?.filter(function(reservation){
+    return reservation.user_id === userNum;
+  })
+
+  console.log('TEST1',reservations)
+  console.log('TEST2',myReservation)
   
   const handleUpdate = async (id) => {
     history.push(`/reviews/${id}`)
@@ -31,9 +36,15 @@ function User() {
     setMessage(['Review deleted']);
     history.push(`/note/${id}`)
   }
+
+  const deleteThisReservation = async (id) => {
+    setMessage(['Review deleted']);
+    history.push(`/reservation/${id}`)
+  }
   
   useEffect(() => {
     dispatch(getReviews());
+    dispatch(getReservations())
   },[dispatch])
   
   useEffect(() => {
@@ -72,6 +83,20 @@ function User() {
           </div>
           
         </div>
+      </div>
+
+      <div className='reservation-container'>
+        <h2 className='user-header' >Your Upcoming Beach Days</h2>
+        {reservations && myReservation?.map(reservation => {
+          return (
+            <li className='review-info' key={reservation.id} style={{ listStyle: "none" }}>
+              <button onClick={() => handleUpdate(reservation.id)}>Update</button>
+              <button onClick={() => deleteThisReservation(reservation.id)}>Delete</button>
+              <div>On {reservation.date}, you'll have Beach Chair setup #{reservation.arrangement} waiting at {reservation.location}!
+              </div>
+            </li>
+            )
+          })}
       </div>
 
       <div className="review-container">
