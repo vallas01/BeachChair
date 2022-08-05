@@ -30,6 +30,18 @@ nav {
     left: 110px;
 }
 
+.logo-city {
+    color: rgb(0,64,128);
+    font-size: 18px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+    width: 240px;
+    position: fixed;
+    top: 60px;
+    left: 9px;
+    text-decoration: none;
+}
+
 
 .dropdown {
     float: left;

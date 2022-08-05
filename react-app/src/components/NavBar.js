@@ -60,10 +60,16 @@ const NavBar = () => {
   return (
     <nav>
       <div className='logoContainer'>
-        <NavLink to='/' exact={true} activeClassName='active' id='beachchair-home-link'>
-           Beach Chair
-        </NavLink>
-        <img className='imgLogo' src='https://res.cloudinary.com/kelp-me/image/upload/v1659468423/jimmy-buffet-clipart-3_czg79p.gif' alt='parrot'></img>
+        <div className='logo-upper'>
+          <NavLink to='/' exact={true} activeClassName='active' id='beachchair-home-link'>
+            Beach Chair
+          </NavLink>
+          <img className='imgLogo' src='https://res.cloudinary.com/kelp-me/image/upload/v1659468423/jimmy-buffet-clipart-3_czg79p.gif' alt='parrot'></img>
+        </div>
+        <div className='logo-city'>
+          ST AUGUSTINE
+        </div>
+      
       </div>
 
         {sessionLinks}
