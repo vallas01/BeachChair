@@ -24,22 +24,24 @@ function User() {
     return reservation.user_id === userNum;
   })
 
-  console.log('TEST1',reservations)
-  console.log('TEST2',myReservation)
-  
-  const handleUpdate = async (id) => {
+    
+  const handleUpdateReview = async (id) => {
     history.push(`/reviews/${id}`)
+  }
+
+  const handleUpdateReservation = async (id) => {
+    history.push(`/reservation/${id}`)
   }
   
   
   const deleteThisReview = async (id) => {
     setMessage(['Review deleted']);
-    history.push(`/note/${id}`)
+    history.push(`/review-del/${id}`)
   }
 
   const deleteThisReservation = async (id) => {
-    setMessage(['Review deleted']);
-    history.push(`/reservation/${id}`)
+    setMessage(['Reservation deleted']);
+    history.push(`/reservation-del/${id}`)
   }
   
   useEffect(() => {
@@ -90,7 +92,7 @@ function User() {
         {reservations && myReservation?.map(reservation => {
           return (
             <li className='review-info' key={reservation.id} style={{ listStyle: "none" }}>
-              <button onClick={() => handleUpdate(reservation.id)}>Update</button>
+              <button onClick={() => handleUpdateReservation(reservation.id)}>Update</button>
               <button onClick={() => deleteThisReservation(reservation.id)}>Delete</button>
               <div>On {reservation.date}, you'll have Beach Chair setup #{reservation.arrangement} waiting at {reservation.location}!
               </div>
@@ -135,7 +137,7 @@ function User() {
                 )}
               </div>
 
-              <button onClick={() => handleUpdate(review.id)}>Update</button>
+              <button onClick={() => handleUpdateReview(review.id)}>Update</button>
               <button onClick={() => deleteThisReview(review.id)}>Delete</button>
               <hr className='list'></hr>
             </li>

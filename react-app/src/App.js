@@ -11,12 +11,13 @@ import User from './components/User';
 import Review from './components/Reviews/Review';
 import Reservation from './components/Reservations/Reservation';
 import EditReview from './components/Reviews/EditReview';
+import EditReservation from './components/Reservations/EditReservation';
 import About from './components/Footer/About';
 import Technology from './components/Footer/Technology';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer/Footer';
-import ReviewNote from './components/Reviews/ReviewNote';
-import ReservationNote from './components/Reservations/ReservationNote';
+import DeleteReview from './components/Reviews/DeleteReview';
+import DeleteReservation from './components/Reservations/DeleteReservation';
 import { authenticate } from './store/session';
 
 function App() {
@@ -62,6 +63,9 @@ function App() {
         <ProtectedRoute path='/reservation' exact={true} >
           <Reservation />
         </ProtectedRoute>
+        <ProtectedRoute path='/reservation/:reservationId' exact={true} >
+          <EditReservation />
+        </ProtectedRoute>
 
         <Route path='/about'>
           <About />
@@ -69,11 +73,11 @@ function App() {
         <Route path='/technology'>
           <Technology />
         </Route>
-        <Route path='/note/:userId'>
-          <ReviewNote />
+        <Route path='/review-del/:userId'>
+          <DeleteReview />
         </Route>
-        <Route path='/reservation/:userId'>
-          <ReservationNote />
+        <Route path='/reservation-del/:userId'>
+          <DeleteReservation />
         </Route>
 
         <Route path=''>
