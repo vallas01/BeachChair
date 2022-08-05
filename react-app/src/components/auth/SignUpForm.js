@@ -19,6 +19,9 @@ const SignUpForm = () => {
 
   const onSignUp = async (e) => {
     e.preventDefault();
+
+    if (email)
+
     if (password === repeatPassword) {
       const data = await dispatch(signUp(username, first_name, last_name, email, password));
       if (data) {
@@ -67,6 +70,7 @@ const SignUpForm = () => {
           <div key={ind}>{error}</div>
         ))}
       </div>
+
       <div>
         <label>User Name</label>
         <input
