@@ -3,3 +3,17 @@
     align-items: center;
     justify-content: center;
 }
+
+.price-container {
+    margin: 50px;
+}
+
+.price-container h3 {
+    font-size: 1.2rem;
+    color: rgb(74,172,39);
+}
+
+.price-container p {
+    font-size: 1rem;
+    margin-left: 50px;
+}
