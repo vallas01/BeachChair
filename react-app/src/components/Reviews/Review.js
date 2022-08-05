@@ -84,6 +84,7 @@ return (
         </div>
 
         <select
+          name='beachlocations'
           className='dropList'
           value={location}
           required
