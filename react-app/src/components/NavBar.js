@@ -23,7 +23,7 @@ const NavBar = () => {
           <div className='navUser-container1'>
             <NavLink to='/reviews' exact={true} activeClassName='active'>Write a Review</NavLink>
           </div>
-          <div className='navUser-container1'>
+          <div className='navUser-container2'>
             <NavLink to='/reservation' exact={true} activeClassName='active'>Set Up a Beach Chair</NavLink>
           </div>
 
@@ -47,10 +47,10 @@ const NavBar = () => {
     sessionLinks = (
         <div className='navUser' >
           <div className='navUser-container1'>
-            <NavLink className="navBtn" to='/login' exact={true} activeClassName='active'>Login</NavLink>
+            <NavLink className="navBtn1" to='/login' exact={true} activeClassName='active'>Login</NavLink>
           </div>
           <div className='navUser-container2'>
-            <NavLink className="navBtn" to='/sign-up' exact={true} activeClassName='active'>Sign Up</NavLink>
+            <NavLink className="navBtn2" to='/sign-up' exact={true} activeClassName='active'>Sign Up</NavLink>
           </div>
         </div>
     )
@@ -58,23 +58,34 @@ const NavBar = () => {
 
 
   return (
-    <nav>
-      <div className='logoContainer'>
-        <div className='logo-upper'>
-          <NavLink to='/' exact={true} activeClassName='active' id='beachchair-home-link'>
-            Beach Chair
-          </NavLink>
-          <img className='imgLogo' src='https://res.cloudinary.com/kelp-me/image/upload/v1659468423/jimmy-buffet-clipart-3_czg79p.gif' alt='parrot'></img>
-        </div>
-        <div className='logo-city'>
-          ST AUGUSTINE
-        </div>
+    <div className='nav-container'>
       
+
+      <nav>
+        <div className='logoContainer'>
+
+          <div className='logo-upper'>
+            <NavLink to='/' exact={true} activeClassName='active' id='beachchair-home-link'>
+              Beach Chair
+            </NavLink>
+            <img className='imgLogo' src='https://res.cloudinary.com/kelp-me/image/upload/v1659468423/jimmy-buffet-clipart-3_czg79p.gif' alt='parrot'></img>
+          </div>
+          <div className='logo-city'>
+            ST AUGUSTINE
+          </div>
+        
+        </div>
+        
+          {sessionLinks}
+        
+    
+      </nav>
+      <div className='nav-background'>   
       </div>
 
-        {sessionLinks}
-  
-    </nav>
+    </div>
+
+    
   );
 }
 

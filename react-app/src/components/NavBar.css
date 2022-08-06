@@ -1,33 +1,84 @@
+.navBtn, .navBtn1, .navBtn2 {
+    border: 1px solid rgba(74,172,39,100%);
+    border-radius: 10px;
+    height: 80px;
+    background-color: rgba(74,172,39,100%);
+    text-decoration: none;
+    color:  rgba(0,64,128,100%);
+    font-weight: 400;
+}
+
+.navBtn1 {
+    padding: 5px 50px;
+}
+
+.navBtn2 {
+    padding: 5px 38px;
+}
+
+.navBtn1:hover, .navBtn2:hover {
+    box-shadow: 5px 5px rgba(0,0,0,20%);
+    font-weight:700;
+}
+
+.nav-background {
+    display: flex;
+    position: fixed;
+    top: -5px;
+    width: 100%;
+    height: 105px;
+    border: 1px none black;
+    background-color: rgb(212, 221, 221);
+}
+
 nav {
+    position: fixed;
     display:flex;
     justify-content:space-between;
-    margin-bottom: 50px;
+    margin-bottom: 0px 5px 50px 0px;
+    height: 58px;
+    width:98%;
+    margin: 0px 5px;
+    border: 2px solid rgba(0,64,128,100%);
+    border-radius: 20px;
+    background-color: rgba(255,255,51,100%);
+    z-index: 2;
+    top: 20px;
 }
 
 .navUser {
     display:flex;
 }
 
-.navUser-container1 {
-    margin-right: 20px;
+.navUser-container1, .navUser-container2 {
+    margin: 19px 22px;
 }
 
 #beachchair-home-link {
     color: rgb(0,64,128);
     font-size: 30px;
-    font-weight: bold;
+    font-weight:bold;
     width: 90px;
     line-height: 25px;
     position: fixed;
-    top: 10px;
+    top: 25px;
     text-decoration: none;
 }
 
+#beachchair-home-link:hover {    
+    top: 26px;
+    font-size: 31px;
+}
+
+.logo-upper {
+    position: fixed;
+    left: 20px;
+}
 
 .imgLogo {
     width: 80px;
     position: fixed;
-    left: 110px;
+    left: 125px;
 }
 
 .logo-city {
@@ -37,8 +88,8 @@ nav {
     font-weight:lighter;
     width: 240px;
     position: fixed;
-    top: 60px;
-    left: 9px;
+    top: 80px;
+    left: 24px;
     text-decoration: none;
 }
 
