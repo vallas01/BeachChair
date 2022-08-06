@@ -118,7 +118,7 @@ return (
                     <option value='' disabled  >Please confirm your set up...</option>
                     <option value={1}>#1 - Basic</option>
                     <option value={2}>#2 - Family</option>
-                    <option value={3}>#3 - Friends and Family</option>   
+                    <option value={3}>#3 - Deluxe</option>   
                 </select>
 
                 <button className='bookBtn' type="submit">Let's Do It</button>

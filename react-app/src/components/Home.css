@@ -6,14 +6,39 @@
 
 .price-container {
     margin: 50px;
+    background-color: rgba(0,0,0,.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer {
+    width:120px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .price-container h3 {
+    font-weight: 500;
     font-size: 0.9rem;
     color: rgb(74,172,39);
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.prices {
+    display: flex;
+    text-align: right;
 }
 
 .price-container p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-left: 50px;
+}
+
+.grow { 
+    transition: all .3s ease-in-out; 
+}
+    
+.grow:hover { 
+    transform: scale(3.0) translate(40px, -30px); 
 }

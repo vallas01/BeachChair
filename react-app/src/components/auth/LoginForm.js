@@ -37,6 +37,8 @@ const LoginForm = () => {
   }
 
   return (
+    <>
+    
     <div className='login-form-container'>
       <form onSubmit={onLogin}>
         <div className='errorMessage'>
@@ -70,6 +72,7 @@ const LoginForm = () => {
       <button className='demo' onClick={demoUser}>Demo user</button>
 
     </div>
+    </>
   );
 };
 

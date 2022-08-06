@@ -100,7 +100,7 @@ console.log(date)
                     <option value='' disabled  >Which set up do you want?</option>
                     <option value={1}>#1 - Basic</option>
                     <option value={2}>#2 - Family</option>
-                    <option value={3}>#3 - Friends and Family</option>   
+                    <option value={3}>#3 - Deluxe</option>   
                 </select>
 
                 <button className='bookBtn' type="submit">Let's Do It</button>

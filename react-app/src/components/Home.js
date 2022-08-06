@@ -26,12 +26,14 @@ function Home() {
 
 
     
-
    
     return (
         <>
+            
             <h2 className="user-header">Welcome to the Home Page!</h2>
             <div className="home-container">
+                
+
                 {sessionUser && (
                     <NavLink className="navBtn" to="/reservation">Let's Do It!</NavLink>
                 )}
@@ -43,27 +45,41 @@ function Home() {
 
 
             <div className="price-container">
-            <h3> Setup #1 (Basic) <br></br> 1 Umbrella & 2 Chairs | Weekly Rate  </h3>
-                <p>
-                    $299 Mon to Fri Setup Fee<br></br>
-                    Umbrella x 1 Included<br></br>
-                    Chairs x 2 Included
-                </p>
-
-            <h3> Setup #2 (Family) <br></br> 2 Umbrella & 4 Chairs | Weekly Rate</h3>
-                <p>
-                    $399 Mon to Fri Setup Fee<br></br>
-                    Umbrella x 2 Included<br></br>
-                    Chairs x 4 Included
-                </p>
-
-            <h3>Setup #3 (Friends and Family) <br></br> 4 Umbrella & 8 Chairs | Weekly Rate  </h3>
-                <p>
-                    $649 Mon to Fri Setup Fee<br></br>
-                    Umbrella x 4 Included<br></br>
-                    Chairs x 8 Included
-                </p>
-
+                <div className="price-subcontainer">
+                    <h3> Setup #1 (Basic) <br></br> 1 Umbrella & 2 Chairs | Weekly Rate  </h3>
+                    <div className="prices">
+                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796121/Beachchair/umbrella1_epcsoj.webp' alt='beachchair'></img>
+                            <p>
+                                $299 Mon to Fri Setup Fee<br></br>
+                                Umbrella x 1 Included<br></br>
+                                Chairs x 2 Included
+                            </p>
+                    </div>
+                </div>
+                <div className="price-subcontainer">
+                    <h3> Setup #2 (Family) <br></br> Cabana & 2 Chairs | Weekly Rate</h3>
+                    <div className="prices">
+                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796131/Beachchair/umbrella2_zxtz7d.webp' alt='beachchair'></img>
+                            <p>
+                                $399 Mon to Fri Setup Fee<br></br>
+                                Cabana x 1 Included<br></br>
+                                Chairs x 4 Included
+                            </p>
+                    </div>
+                </div>
+                <div className="price-subcontainer">
+                        <h3>Setup #3 (Deluxe) <br></br> Cabana & 6 Chairs | Weekly Rate  </h3>
+                    <div className="prices">
+                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796137/Beachchair/umbrella3_k2msob.webp' alt='beachchair'></img>
+                            <p>
+                                $649 Mon to Fri Setup Fee<br></br>
+                                Cabana x 1 Included<br></br>
+                                Chairs x 6 Included<br></br>
+                                Fully Stocked Cooler<br></br>
+                                with Dricks and Ice!!!
+                            </p>
+                    </div>
+                </div>
             </div>
 
             <div className="topReview">
