@@ -30,8 +30,8 @@ function Home() {
     return (
         <>
             
-            <h2 className="user-header">Welcome to the Home Page!</h2>
             <div className="home-container">
+            <h2 className="user-header">Welcome to the Home Page!</h2>
                 
 
                 {sessionUser && (

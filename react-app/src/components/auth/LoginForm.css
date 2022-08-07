@@ -37,7 +37,14 @@
  text-decoration: none;
 }
 
-.demoBtn, .loginBtn {
+.account-question-link {
+    font-weight:  bold;
+}
+.account-question-link:hover {
+    color: rgba(0,0,0,70%);
+    font-size: .8rem;
+}
+.demoBtn, .loginBtn, .bookBtn {
     height: 30px;
     width: 180px;
     margin-top: 10px;
@@ -53,7 +60,7 @@
     text-decoration: none;
 }
 
-.demoBtn:hover, .loginBtn:hover {
+.demoBtn:hover, .loginBtn:hover, .bookBtn:hover {
     box-shadow: 5px 5px rgba(0,0,0,20%);
     font-weight:700;
 }

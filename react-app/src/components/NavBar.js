@@ -21,10 +21,10 @@ const NavBar = () => {
           </div> */}
 
           <div className='navUser-container1'>
-            <NavLink to='/reviews' exact={true} activeClassName='active'>Write a Review</NavLink>
+            <NavLink className='reviewBtn' to='/reviews' exact={true} activeClassName='active'>Write a Review</NavLink>
           </div>
           <div className='navUser-container2'>
-            <NavLink to='/reservation' exact={true} activeClassName='active'>Set Up a Beach Chair</NavLink>
+            <NavLink className='reviewBtn' to='/reservation' exact={true} activeClassName='active'>Set Up a Beach Chair</NavLink>
           </div>
 
           <div className='navUser-container2'>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import './LoginForm.css'
-
+ 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
@@ -67,6 +67,10 @@ const SignUpForm = () => {
     <div className='form-container'>
 
     <form className='form-log' onSubmit={onSignUp}>
+
+      <label className='login-welcome1'>WELCOME!</label>
+      <label className='login-welcome2'>(Let's get you a beach chair)</label>
+
       <div className='errorMessage'>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
@@ -139,7 +143,15 @@ const SignUpForm = () => {
           value={avatar}
         ></input>
       </div> */}
+
       <button className='loginBtn' type='submit'>Sign Up</button>
+
+      <div className='account-question'>
+          <div>Already have a Beach Chair account?
+            <span><NavLink className="account-question account-question-link" to="/login">Login!</NavLink></span>
+          </div>
+      </div>
+
     </form>
 
     </div>
