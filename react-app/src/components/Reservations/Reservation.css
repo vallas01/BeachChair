@@ -1,7 +1,23 @@
+.booking-container {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .user-header {
     color: rgb(0,64,128);
     display: flex;
     justify-content: center;
+}
+
+.booking-form {
+    width: 380px;
+    border: 1px solid rgba(0,0,0,20%);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,10%);
+    margin-bottom: 10px;
 }
 
 .dropList, .dropListEdit {

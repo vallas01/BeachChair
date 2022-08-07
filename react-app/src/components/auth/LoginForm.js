@@ -75,11 +75,8 @@ const LoginForm = () => {
 
         <div className='account-question'>
           <div>Don't have a Beach Chair account?
-            <span><NavLink className="account-question " to="/sign-up">Sign up!</NavLink></span>
-
+            <span><NavLink className="account-question account-question-link" to="/sign-up">Sign up!</NavLink></span>
           </div>
-             
-          
         </div>
 
       </form>
