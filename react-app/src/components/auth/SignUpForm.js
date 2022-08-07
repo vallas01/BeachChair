@@ -64,14 +64,16 @@ const SignUpForm = () => {
   }
   
   return (
-    <form onSubmit={onSignUp}>
+    <div className='form-container'>
+
+    <form className='form-log' onSubmit={onSignUp}>
       <div className='errorMessage'>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
 
-      <div>
+      <div className='auth-input'>
         <label>User Name</label>
         <input
           type='text'
@@ -81,7 +83,7 @@ const SignUpForm = () => {
         ></input>
       </div>
 
-      <div>
+      <div className='auth-input'>
         <label>First Name</label>
         <input
           type='text'
@@ -90,7 +92,7 @@ const SignUpForm = () => {
           value={first_name}
         ></input>
       </div>
-      <div>
+      <div className='auth-input'>
         <label>Last Name</label>
         <input
           type='text'
@@ -100,7 +102,7 @@ const SignUpForm = () => {
         ></input>
       </div>
       
-      <div>
+      <div className='auth-input'>
         <label>Email</label>
         <input
           type='text'
@@ -109,7 +111,7 @@ const SignUpForm = () => {
           value={email}
         ></input>
       </div>
-      <div>
+      <div className='auth-input'>
         <label>Password</label>
         <input
           type='password'
@@ -118,7 +120,7 @@ const SignUpForm = () => {
           value={password}
         ></input>
       </div>
-      <div>
+      <div className='auth-input'>
         <label>Confirm Password</label>
         <input
           type='password'
@@ -137,8 +139,10 @@ const SignUpForm = () => {
           value={avatar}
         ></input>
       </div> */}
-      <button type='submit'>Sign Up</button>
+      <button className='loginBtn' type='submit'>Sign Up</button>
     </form>
+
+    </div>
   );
 };
 
