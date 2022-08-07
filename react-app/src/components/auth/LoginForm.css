@@ -1,21 +1,49 @@
-.login-form-container {
-   
+.form-container {
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.errorMessage {
-    color: red;
+.form-log {
+    width: 380px;
+    border: 1px solid rgba(0,0,0,20%);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,10%); 
 }
 
-.demo {
-    height: 50px;
+.login-welcome1 {
+    margin-top: 10px;
+    color: rgb(0,64,128);
+    font-size: 20px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+}
+
+.login-welcome2, .account-question {
+    margin-top: 10px;
+    color: black;
+    font-size: 12px;
+    letter-spacing: .15rem;
+    font-weight:lighter;
+}
+
+.auth-input {
+    margin-top: 10px;
+}
+
+.account-question {
+ display: inline;
+ text-decoration: none;
+}
+
+.demoBtn, .loginBtn {
+    height: 30px;
     width: 180px;
-    margin: 10px;
+    margin-top: 10px;
     background-color:  rgb(74,172,39);
     color: rgb(0,64,128);
-    border-color: rgba(0, 197, 133, 0);
+    border: 1px solid rgba(0,64,128,100%);
     font-size: 1rem;
     font-weight: 500;
     padding: 6px 16px 8px;
@@ -23,4 +51,13 @@
     cursor: pointer;
     transition: background 0.2s ease 0s;
     text-decoration: none;
+}
+
+.demoBtn:hover, .loginBtn:hover {
+    box-shadow: 5px 5px rgba(0,0,0,20%);
+    font-weight:700;
+}
+
+.errorMessage {
+    color: red;
 }

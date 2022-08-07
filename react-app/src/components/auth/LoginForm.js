@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { login } from '../../store/session';
 import './LoginForm.css'
-
+ 
 const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState('');
@@ -39,37 +39,52 @@ const LoginForm = () => {
   return (
     <>
     
-    <div className='login-form-container'>
-      <form onSubmit={onLogin}>
+    <div className='form-container'>
+
+      <form className='form-log' onSubmit={onLogin}>
+
+        <label className='login-welcome1'>WELCOME BACK!</label>
+        <label className='login-welcome2'>(Let's get you a beach chair)</label>
+      
         <div className='errorMessage'>
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
           ))}
         </div>
-        <div>
+        <div className='auth-input'>
           <label htmlFor='email'>Email</label>
           <input
             name='email'
             type='text'
-            placeholder='Email'
+            placeholder=''
             value={email}
             onChange={updateEmail}
           />
         </div>
-        <div>
+        <div className='auth-input'>
           <label htmlFor='password'>Password</label>
           <input
             name='password'
             type='password'
-            placeholder='Password'
+            placeholder=''
             value={password}
             onChange={updatePassword}
           />
-          <button type='submit'>Login</button>
         </div>
+          <button className='loginBtn' type='submit'>Login</button>
+
+        <div className='account-question'>
+          <div>Don't have a Beach Chair account?
+            <span><NavLink className="account-question " to="/sign-up">Sign up!</NavLink></span>
+
+          </div>
+             
+          
+        </div>
+
       </form>
 
-      <button className='demo' onClick={demoUser}>Demo user</button>
+      <button className='demoBtn' onClick={demoUser}>Demo user</button>
 
     </div>
     </>
