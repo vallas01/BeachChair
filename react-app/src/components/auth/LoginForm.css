@@ -25,6 +25,10 @@
     padding: 4px;
 }
 
+.auth-input label {
+    color: white;
+}
+
 .login-welcome2, .account-question {
     margin: 10px;
     color: white;
