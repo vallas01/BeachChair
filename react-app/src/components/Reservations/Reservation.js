@@ -106,7 +106,7 @@ function Reservation() {
                 <button className='loginBtn bookBtn' type="submit">Let's Do It</button>
       
             </form>
-            
+            <div className="spacer"></div>
             <Price />
            </div>
     )
