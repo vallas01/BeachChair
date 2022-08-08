@@ -3,6 +3,7 @@ import './Reservation.css'
 import { createReservation } from '../../store/reservation'
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import Price from "../Price";
 
 function Reservation() {
     const history = useHistory()
@@ -29,7 +30,7 @@ function Reservation() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-console.log(date)
+ 
         if (!date) {
             return setErrors(['Please pick your beach day'])
         }
@@ -40,8 +41,7 @@ console.log(date)
             arrangement
           };
 
-          console.log('newReservation===',newReservation)
-
+          
           dispatch(createReservation(newReservation))
           .then(() => history.push(`/users/${user.id}`))
           .catch(async (res) => {
@@ -53,9 +53,9 @@ console.log(date)
 
 
     return (
-        <div className="booking-container">
+        <div className="booking-container form-container">
         
-            <h2 className="user-header">Let's Get Your Beach Chair Set Up</h2>
+            {/* <img className="background-Img" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967136/Beachchair/big-rentals_yblfob.webp' alt='beachday'></img> */}
 
             
             <div className='error-container'>
@@ -66,10 +66,9 @@ console.log(date)
                 )}
             </div>
 
-            <form onSubmit={handleSubmit} className="booking-form">
-                <label>
-                    Pick your beach day!
-                </label>
+            <form onSubmit={handleSubmit} className="booking-form form-log">
+                <label className='login-welcome1'>PICK YOUR BEACH DAY!</label>
+                <label className='login-welcome2'>(Let's get you a beach chair)</label>
                 <input
                     type="date"
                     placeholder='start date...'
@@ -89,7 +88,7 @@ console.log(date)
                     <option value='' disabled  >Which beach are you visiting?</option>
                     <option value='Villano Beach'>Villano Beach</option>
                     <option value='St Augustine Pier'>St Augustine Pier</option>
-                    <option value='Beachcomber Street'>Beachcomber Street</option>   
+                    <option value='Crescent Beach'>Crescent Beach</option>   
                 </select>
 
                 <select
@@ -99,55 +98,17 @@ console.log(date)
                     onChange={(e) => setArrangement(e.target.value)}
                 >
                     <option value='' disabled  >Which set up do you want?</option>
-                    <option value={1}>#1 - Basic</option>
-                    <option value={2}>#2 - Family</option>
-                    <option value={3}>#3 - Deluxe</option>   
+                    <option value={1}>#1 - Solo</option>
+                    <option value={2}>#2 - Couples</option>
+                    <option value={3}>#3 - Family</option>   
                 </select>
 
-                <button className='bookBtn' type="submit">Let's Do It</button>
+                <button className='loginBtn bookBtn' type="submit">Let's Do It</button>
       
             </form>
-            <div className="price-container">
-                <div className="price-subcontainer">
-                    <h3> Setup #1 (Basic) <br></br> 1 Umbrella & 2 Chairs | Weekly Rate  </h3>
-                    <div className="prices">
-                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796121/Beachchair/umbrella1_epcsoj.webp' alt='beachchair'></img>
-                            <p>
-                                $299 Mon to Fri Setup Fee<br></br>
-                                Umbrella x 1 Included<br></br>
-                                Chairs x 2 Included
-                            </p>
-                    </div>
-                </div>
-                <div className="price-subcontainer">
-                    <h3> Setup #2 (Family) <br></br> Cabana & 2 Chairs | Weekly Rate</h3>
-                    <div className="prices">
-                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796131/Beachchair/umbrella2_zxtz7d.webp' alt='beachchair'></img>
-                            <p>
-                                $399 Mon to Fri Setup Fee<br></br>
-                                Cabana x 1 Included<br></br>
-                                Chairs x 4 Included
-                            </p>
-                    </div>
-                </div>
-                <div className="price-subcontainer">
-                        <h3>Setup #3 (Deluxe) <br></br> Cabana & 6 Chairs | Weekly Rate  </h3>
-                    <div className="prices">
-                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796137/Beachchair/umbrella3_k2msob.webp' alt='beachchair'></img>
-                            <p>
-                                $649 Mon to Fri Setup Fee<br></br>
-                                Cabana x 1 Included<br></br>
-                                Chairs x 6 Included<br></br>
-                                Fully Stocked Cooler<br></br>
-                                with Dricks and Ice!!!
-                            </p>
-                    </div>
-                </div>
-            </div>
-            <div className="beachChair">
-                <img src='https://res.cloudinary.com/kelp-me/image/upload/v1659721920/beach-chairs_uuptre.jpg' alt='beachchairs'></img>
-            </div>
-        </div>
+            
+            <Price />
+           </div>
     )
 }
 

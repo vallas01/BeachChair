@@ -1,3 +1,13 @@
+.background-Img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    position: fixed;
+    z-index: -1;
+}
+
 .navBtn, .navBtn1, .navBtn2 {
     border: 1px solid rgba(0,64,128,100%);
     border-radius: 10px;
@@ -21,15 +31,6 @@
     font-weight:700;
 }
 
-.nav-background {
-    display: flex;
-    position: fixed;
-    top: -5px;
-    width: 100%;
-    height: 105px;
-    border: 1px none black;
-    background-color: rgb(212, 221, 221);
-}
 
 nav {
     position: fixed;
@@ -83,15 +84,17 @@ nav {
 }
 
 .logo-city {
-    color: rgb(0,64,128);
+    color: white;
+    background: rgba(0,0,0,10%);
     font-size: 18px;
     letter-spacing: .25rem;
     font-weight:lighter;
     text-decoration: none;
-    width: 240px;
+    width: 188px;
     position: fixed;
     top: 82px;
     left: 24px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
 }
 
 .reviewBtn {

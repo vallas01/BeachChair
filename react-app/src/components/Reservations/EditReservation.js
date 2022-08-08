@@ -103,7 +103,7 @@ return (
                     <option value='' disabled  >Please confirm the location...</option>
                     <option value='Villano'>Villano Beach</option>
                     <option value='St Augustine Pier'>St Augustine Pier</option>
-                    <option value='Beachcomber Street'>Beachcomber Street</option>   
+                    <option value='Crescent Beach'>Crescent Beach</option>   
                 </select>
 
                 <label>
@@ -116,9 +116,9 @@ return (
                     onChange={(e) => setArrangement(e.target.value)}
                 >
                     <option value='' disabled  >Please confirm your set up...</option>
-                    <option value={1}>#1 - Basic</option>
-                    <option value={2}>#2 - Family</option>
-                    <option value={3}>#3 - Deluxe</option>   
+                    <option value={1}>#1 - Solo</option>
+                    <option value={2}>#2 - Couples</option>
+                    <option value={3}>#3 - Family</option>   
                 </select>
 
                 <button className='bookBtn' type="submit">Let's Do It</button>

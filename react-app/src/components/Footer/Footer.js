@@ -13,14 +13,16 @@ function Footer() {
             </div>
             <hr></hr>
             <div className='team-container'>
-                    <div className='team-container2'>Designed by Andrew Vallas</div>
-                    <div className='team-container1' >
-                        <i className="fa-brands fa-github-square"></i>
-                        <a className="footer-link" href='https://github.com/vallas01'  >GitHub</a>
-                    </div>
-                    <div className='team-container1'>
-                        <i className="fa-brands fa-linkedin"></i>
-                        <a className="footer-link" href='https://www.linkedin.com/in/andrew-vallas-221b5a241/' >LinkedIn</a>
+                    <div className='team-container1'>Designed by Andrew Vallas</div>
+                    <div lassName="footer-link">
+                        <div className='team-container2' >
+                            <i className="fa-brands fa-github-square"></i>
+                            <a className="footer-link" href='https://github.com/vallas01'  >GitHub</a>
+                        </div>
+                        <div>
+                            <i className="fa-brands fa-linkedin"></i>
+                            <a className="footer-link" href='https://www.linkedin.com/in/andrew-vallas-221b5a241/' >LinkedIn</a>
+                        </div>
                     </div>
             </div>
         </div>
