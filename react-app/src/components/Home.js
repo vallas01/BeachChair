@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getReviews } from "../store/review";
 import './Home.css';
-
+import Price from "./Price";
 
 function Home() {
     // eslint-disable-next-line
@@ -31,7 +31,7 @@ function Home() {
         <>
             
             <div className="home-container">
-            <h2 className="user-header">Welcome to the Home Page!</h2>
+            <h2 className="user-header">Plan the Perfect Vacation!</h2>
                 
 
                 {sessionUser && (
@@ -42,45 +42,7 @@ function Home() {
                 )}
             </div>
 
-
-
-            <div className="price-container">
-                <div className="price-subcontainer">
-                    <h3> Setup #1 (Basic) <br></br> 1 Umbrella & 2 Chairs | Weekly Rate  </h3>
-                    <div className="prices">
-                        <img className="offer grow grow-left" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967121/Beachchair/big-beach-chair_ltcjuc.png' alt='beachchair'></img>
-                            <p>
-                                $299 Mon to Fri Setup Fee<br></br>
-                                Umbrella x 1 Included<br></br>
-                                Chairs x 2 Included
-                            </p>
-                    </div>
-                </div>
-                <div className="price-subcontainer">
-                    <h3> Setup #2 (Family) <br></br> Cabana & 2 Chairs | Weekly Rate</h3>
-                    <div className="prices">
-                        <img className="offer grow grow-center" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967121/Beachchair/big-beach-set_xksrql.png' alt='beachchair'></img>
-                            <p>
-                                $399 Mon to Fri Setup Fee<br></br>
-                                Cabana x 1 Included<br></br>
-                                Chairs x 4 Included
-                            </p>
-                    </div>
-                </div>
-                <div className="price-subcontainer">
-                        <h3>Setup #3 (Deluxe) <br></br> Cabana & 6 Chairs | Weekly Rate  </h3>
-                    <div className="prices">
-                        <img className="offer grow grow-right" src='https://res.cloudinary.com/kelp-me/image/upload/v1659968048/Beachchair/big-beach-5-chair_k3zrff.png' alt='beachchair'></img>
-                            <p>
-                                $649 Mon to Fri Setup Fee<br></br>
-                                Cabana x 1 Included<br></br>
-                                Chairs x 6 Included<br></br>
-                                Fully Stocked Cooler<br></br>
-                                with Dricks and Ice!!!
-                            </p>
-                    </div>
-                </div>
-            </div>
+            <Price />
 
             <div className="topReview">
                 <h2>See what other people are saying...</h2>

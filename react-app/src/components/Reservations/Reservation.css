@@ -1,10 +1,6 @@
 .booking-container {
-    margin-top: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   /* background-image: 'https://res.cloudinary.com/kelp-me/image/upload/v1659967136/Beachchair/big-rentals_yblfob.webp'; */
 }
-
 
 .user-header {
     color: rgb(0,64,128);
@@ -12,13 +8,17 @@
     justify-content: center;
 }
 
-.booking-form {
+.bookBtn {
+    margin-bottom: 20px 
+}
+
+/* .booking-form {
     width: 380px;
     border: 1px solid rgba(0,0,0,20%);
     border-radius: 30px;
     background-color: rgba(0,0,0,10%);
     margin-bottom: 10px;
-}
+} */
 
 .dropList, .dropListEdit {
     width: 200px;
@@ -26,11 +26,4 @@
     margin: 5px;
 }
 
-.reservation-title {
-    text-align: center;
-}
 
-.beachChair {
-    display: flex;
-    justify-content: center;
-}

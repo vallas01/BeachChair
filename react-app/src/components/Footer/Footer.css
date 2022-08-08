@@ -1,3 +1,8 @@
+.footer-container {
+    position: relative;
+    bottom: -200px;
+}
+
 .aboutImage {
     margin: 1px;
     width: 100px;
@@ -24,9 +29,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 200px;
+    margin: 10px auto 0 auto;
+    background-color: rgba(255,255,255,20%);
 }
 
 .team-container1 {
+    color: green;
+    height: 10px;
+}
+
+.team-container2 {
     font-size: x-small;
     margin: 1px;
     height: 10px;
@@ -34,10 +47,6 @@
     color: green;
 }
 
-.team-container2 {
-    color: green;
-    height: 10px
-}
 
 
 .link-container {
@@ -46,19 +55,15 @@
     justify-content: space-evenly;
 }
 
-.fa-brands,
-.fa-solid {
+.fa-brands, .fa-solid {
     margin: 25px;
 }
 
-.developer-link {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: lighter;
-    font-size: 1.1rem;
-    padding: 6px 12px;
+.fa-github-square, .fa-linkedin {
     color: rgb(40, 64, 12);
-    text-decoration: none;
 }
+
+
 
 .footer-link {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -69,18 +74,50 @@
     text-decoration: none;
 }
 
-.developer-link:hover,
+
 .footer-link:hover {
-    text-decoration: underline;
-    text-decoration-color: green;
+    font-weight: bolder;
+}
+
+/* TECH CSS below*/
+
+.tech-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 
+.tech-heading {
+    margin: 10px auto 0 auto;
+    color: rgb(0,64,128);
+    background-color: rgba(255,255,255,60%); 
+    width: 400px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+    padding: 4px;
+    text-align:  center;
+}
+.tech-subcontainer {
+    margin : 200px auto 0 auto;
+    background-color: rgba(255,255,255,40%);
+    width: 500px;
+    border: 1px solid rgba(0,0,0,20%);
+    border-radius: 30px;
+   
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
+}
+.tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
 
-/* about CSS below*/
 
-.headingOne,
-.headingTwo,
+/* ABOUT CSS below*/
+
 .aboutP {
     display: flex;
     justify-content: center;

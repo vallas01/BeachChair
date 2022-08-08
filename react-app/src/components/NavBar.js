@@ -80,8 +80,8 @@ const NavBar = () => {
         
     
       </nav>
-      <div className='nav-background'>   
-      </div>
+      
+      <img className="background-Img" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967136/Beachchair/big-rentals_yblfob.webp' alt='beachday'></img>
 
     </div>
 

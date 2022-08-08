@@ -1,50 +1,56 @@
 .form-container {
-    margin-top: 200px;
+    /* margin-top: 110px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .form-log {
-    width: 380px;
+    margin-top: 200px;
+    width: 350px;
     border: 1px solid rgba(0,0,0,20%);
     border-radius: 30px;
-    background-color: rgba(0,0,0,10%); 
+    background-color: rgba(0,0,0,20%); 
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
 }
 
 .login-welcome1 {
     margin-top: 10px;
     color: rgb(0,64,128);
+    background-color: rgba(255,255,255,50%); 
+    border-radius: 10px;
     font-size: 20px;
     letter-spacing: .25rem;
     font-weight:lighter;
+    padding: 4px;
 }
 
 .login-welcome2, .account-question {
-    margin-top: 10px;
-    color: black;
+    margin: 10px;
+    color: white;
     font-size: 12px;
     letter-spacing: .15rem;
     font-weight:lighter;
+    text-align: center;
+}
+
+.account-question-link {
+    margin-top: 4px;
+    font-weight:  bold;
+    text-decoration: none;
+}
+
+.account-question-link:hover {
+    color: rgba(0,0,0,70%);
+    font-size: .8rem;
 }
 
 .auth-input {
     margin-top: 10px;
 }
 
-.account-question {
- display: inline;
- text-decoration: none;
-}
 
-.account-question-link {
-    font-weight:  bold;
-}
-.account-question-link:hover {
-    color: rgba(0,0,0,70%);
-    font-size: .8rem;
-}
-.demoBtn, .loginBtn, .bookBtn {
+.demoBtn, .loginBtn {
     height: 30px;
     width: 180px;
     margin-top: 10px;

@@ -1,13 +1,14 @@
 import './Footer.css'
 
 const Technology = () => {
+
     return (
-        <div className='about-outer-container'>
-            <div className='headingOne'>OUR SKILL SET</div>
-            <div className='headingTwo'>Technologies used for this project</div>
-
-
             <div className='tech-container'>
+
+            <div className='tech-subcontainer'>
+
+                <div className='tech-heading'>PROJECT TECHNOLOGIES</div>
+
                 <div className='tech'>
                     <i className="fa-brands fa-python fa-2xl"></i>
                     <a className="developer-link" target="_blank" rel="noopener noreferrer" href='https://www.python.org/doc/' >Python</a>
@@ -44,12 +45,9 @@ const Technology = () => {
                     <i className="fa-solid fa-flask fa-2xl"></i>
                     <a className="developer-link" target="_blank" rel="noopener noreferrer" href='https://flask.palletsprojects.com/en/2.1.x/' >Flask</a>
                 </div>
-
             </div>
 
-
-
-        </div>
+            </div>     
     )
 }
 
