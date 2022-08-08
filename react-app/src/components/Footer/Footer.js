@@ -8,7 +8,7 @@ function Footer() {
         <div className='footer-container'>
             <div className='link-container'>
                 <NavLink className="footer-link" to="/technology">TECH</NavLink>
-                <img className='footerImage' src='https://res.cloudinary.com/kelp-me/image/upload/v1659473085/drink_edllbn.jpg' alt='yelp'></img>
+                <img className='footerImage' src='https://res.cloudinary.com/kelp-me/image/upload/v1659964106/Beachchair/drink_fav-removebg_vpsgvn.png' alt='yelp'></img>
                 <NavLink className="footer-link" to="/about">ABOUT</NavLink>
             </div>
             <hr></hr>
