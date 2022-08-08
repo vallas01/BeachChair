@@ -48,7 +48,7 @@ function Home() {
                 <div className="price-subcontainer">
                     <h3> Setup #1 (Basic) <br></br> 1 Umbrella & 2 Chairs | Weekly Rate  </h3>
                     <div className="prices">
-                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796121/Beachchair/umbrella1_epcsoj.webp' alt='beachchair'></img>
+                        <img className="offer grow grow-left" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967121/Beachchair/big-beach-chair_ltcjuc.png' alt='beachchair'></img>
                             <p>
                                 $299 Mon to Fri Setup Fee<br></br>
                                 Umbrella x 1 Included<br></br>
@@ -59,7 +59,7 @@ function Home() {
                 <div className="price-subcontainer">
                     <h3> Setup #2 (Family) <br></br> Cabana & 2 Chairs | Weekly Rate</h3>
                     <div className="prices">
-                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796131/Beachchair/umbrella2_zxtz7d.webp' alt='beachchair'></img>
+                        <img className="offer grow grow-center" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967121/Beachchair/big-beach-set_xksrql.png' alt='beachchair'></img>
                             <p>
                                 $399 Mon to Fri Setup Fee<br></br>
                                 Cabana x 1 Included<br></br>
@@ -70,7 +70,7 @@ function Home() {
                 <div className="price-subcontainer">
                         <h3>Setup #3 (Deluxe) <br></br> Cabana & 6 Chairs | Weekly Rate  </h3>
                     <div className="prices">
-                        <img className="offer grow" src='https://res.cloudinary.com/kelp-me/image/upload/v1659796137/Beachchair/umbrella3_k2msob.webp' alt='beachchair'></img>
+                        <img className="offer grow grow-right" src='https://res.cloudinary.com/kelp-me/image/upload/v1659968048/Beachchair/big-beach-5-chair_k3zrff.png' alt='beachchair'></img>
                             <p>
                                 $649 Mon to Fri Setup Fee<br></br>
                                 Cabana x 1 Included<br></br>
@@ -87,17 +87,12 @@ function Home() {
             {myReviews && myReviews?.map(review => {
                 return (
                     
-                <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
-                <div>
-                <strong>Location reviewed: </strong>
-                {review.location}
-              </div>
-              <div>
-                  {review.text}
-              </div>  
+                <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
+                <div><strong>{review.location}</strong> - {review.text}
+                </div>  
               
 
-              <div>
+              <div className="topReview-stars">
                 {review.rating === 5 && (
                   <label style={{ cursor: "pointer" }}
                     className="star-review">&#9733; &#9733; &#9733; &#9733; &#9733;</label>

@@ -9,7 +9,7 @@
     margin: 50px;
     background-color: rgba(0,0,0,.1);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .offer {
@@ -38,8 +38,38 @@
 
 .grow { 
     transition: all .3s ease-in-out; 
+}   
+.grow-left:hover{ 
+    transform: scale(4.0) translate(40px, -30px); 
 }
-    
-.grow:hover { 
-    transform: scale(3.0) translate(40px, -30px); 
+.grow-center:hover{ 
+    transform: scale(4.0) translate(20px, -30px); 
+}
+.grow-right:hover{ 
+    transform: scale(4.0) translate(-40px, -30px); 
+}
+
+.topReview {
+    margin-left: 50px;
+
+}
+
+.topReview h2 {
+    margin-top: 10px;
+    color: rgb(0,64,128);
+    font-size: 20px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+}
+
+.topReview-info {
+    margin: 10px 20px;
+    color: black;
+    font-size: 16px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+}
+
+.topReview-stars {
+    margin: 0px 20px 20px 20px;
 }
