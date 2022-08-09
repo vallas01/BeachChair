@@ -32,7 +32,8 @@ function Home() {
         <div className="home-container">
             <div className="value-proposition">
 
-                <div className="value-header">Plan the Perfect Vacation!</div>
+                <div className="value-header1">Plan the Perfect Vacation!</div>
+                <div className="value-header2">With St Augustine's Premier Beach Service</div>
                 <div className="value-btn-container">
                     {sessionUser && (
                         <NavLink className="navBtnHome" to="/reservation">Set up my Beach Chair!</NavLink>

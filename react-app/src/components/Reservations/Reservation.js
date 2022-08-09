@@ -70,6 +70,7 @@ function Reservation() {
                 <label className='login-welcome1'>PICK YOUR BEACH DAY!</label>
                 <label className='login-welcome2'>(Let's get you a beach chair)</label>
                 <input
+                    className='dropCalendar'
                     type="date"
                     placeholder='start date...'
                     value={date}
@@ -85,7 +86,8 @@ function Reservation() {
                     required
                     onChange={(e) => setLocation(e.target.value)}
                 >
-                    <option value='' disabled  >Which beach are you visiting?</option>
+                    {/* <option value='' disabled  >Which beach are you visiting?</option> */}
+                    <option value='' disabled  >WHICH BEACH ARE YOU VISITING?</option>
                     <option value='Villano Beach'>Villano Beach</option>
                     <option value='St Augustine Pier'>St Augustine Pier</option>
                     <option value='Crescent Beach'>Crescent Beach</option>   
@@ -97,7 +99,7 @@ function Reservation() {
                     required
                     onChange={(e) => setArrangement(e.target.value)}
                 >
-                    <option value='' disabled  >Which set up do you want?</option>
+                    <option value='' disabled  >WHICH SETUP DO YOU WANT?</option>
                     <option value={1}>#1 - Solo</option>
                     <option value={2}>#2 - Couples</option>
                     <option value={3}>#3 - Family</option>   
