@@ -31,22 +31,36 @@
     justify-content: center;
     width: 200px;
     margin: 10px auto 0 auto;
-    background-color: rgba(255,255,255,20%);
 }
 
 .team-container1 {
     color: green;
-    height: 10px;
+    height: 20px;
+    background-color: rgba(255,255,255,20%);
 }
 
 .team-container2 {
-    font-size: x-small;
     margin: 1px;
-    height: 10px;
-    width: 140px;
-    color: green;
+    width: 240px;
+    display: flex;
+    justify-content: space-around;
 }
 
+.about-subcontainer {
+    margin : 0 auto 0 auto;
+    margin-top: 15%;
+    width: 500px;
+    border: 1px solid rgba(0,0,0,20%);
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
+    color: rgb(0,64,128);
+    padding: 20px 20px 0px;
+    background-color: rgba(255,255,255,50%); 
+    font-size: 20px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+    text-align: center;
+}
 
 
 .link-container {
@@ -69,14 +83,17 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: .8rem;
-    padding: 6px 2px;
-    color: rgb(40, 64, 12);
+    padding: 6px 8px;
+    color: white;
     text-decoration: none;
+    background-color: rgba(0,0,0,25%); 
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
+    border-radius: 30%;
+    
 }
 
-
 .footer-link:hover {
-    font-weight: bolder;
+    font-size: .9rem;
 }
 
 /* TECH CSS below*/
@@ -106,7 +123,6 @@
     width: 500px;
     border: 1px solid rgba(0,0,0,20%);
     border-radius: 30px;
-   
     box-shadow: 0px 0px 15px rgba(0,0,0,30%);
 }
 .tech {

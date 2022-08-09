@@ -110,10 +110,8 @@ const reservationReducer = (state = initialState, action) => {
     }
 
     case REMOVE_RESERVATION: {
-      newState = { ...state }
-      console.log('newState1====',newState)
+      newState = { ...state }     
       delete newState[action.id]
-      console.log('newState2====',newState)
       return newState
     }
 

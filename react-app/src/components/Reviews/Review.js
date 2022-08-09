@@ -50,26 +50,22 @@ function Review() {
 
 
 return (
-    <>
-      <h1 className='review-title'> Set Up Your Review </h1>
+    <div className='form-container'>
+      <form onSubmit={handleSubmit} className="form-log ">
 
-      <div className='error-container'>
-        {errors.length > 0 && (
-            <ul >
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-          </ul>
-        )}
-      </div>
+        <h1 className='login-welcome1'>SET UP YOUR REVIEW</h1>
 
+        <div className='error-container'>
+          {errors.length > 0 && (
+              <ul >
+              {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+          )}
+        </div>
 
-
-
-      <form onSubmit={handleSubmit} className="review-form">
-
-        <label>
+        {/* <label className='login-welcome2' >
           Enter your review information...
-        </label>
-
+        </label> */}
 
         <div className="star-rating">
           <input type="radio" id="5-stars" value="5" name="stars"
@@ -96,10 +92,10 @@ return (
           required
           onChange={(e) => setLocation(e.target.value)}
         >
-          <option value='' disabled  >Which location did you visit?</option>
+          <option value='' disabled  >WHICH LOCATION DID YOU VISIT?</option>
           <option value='Villano Beach'>Villano Beach</option>
           <option value='St Augustine Pier'>St Augustine Pier</option>
-          <option value='Beachcomber Street'>Beachcomber Street</option>   
+          <option value='Crescent Beach'>Crescent Beach</option>   
         </select>
 
        
@@ -115,10 +111,11 @@ return (
            
 
 
-        <button className='hostSubmit' type="submit">Submit</button>
+        <button className='loginBtn bookBtn' type="submit">Let's Do It</button>
       </form>
-
-    </>
+       <div className='review-spacer'>
+       </div> 
+    </div>
   );
 }
 
