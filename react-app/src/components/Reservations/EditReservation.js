@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { updateReservationDetails, getReservations } from '../../store/reservation'
 import './Reservation.css'
+import Price from '../Price';
 
 
 function EditReservation() {
@@ -65,23 +66,25 @@ function EditReservation() {
   let yMax = yearMax.toString();
 
 return (
-    <>
-      <h1 className='reservation-title'> Edit Your Reservation </h1>
+    <div className="booking-container form-container">
+      
+        <div className='error-container'>
+          {errors.length > 0 && (
+              <ul >
+              {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+          )}
+        </div>
 
-      <div className='error-container'>
-        {errors.length > 0 && (
-            <ul >
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-          </ul>
-        )}
-      </div>
+        <form onSubmit={handleSubmit}  className="booking-form form-log">
 
+                <h1 className='login-welcome1'> Edit Your Reservation </h1>
      
-      <form onSubmit={handleSubmit} className="booking-form">
-                <label>
-                    Confirm your beach day - {reservation[0].date}
+                <label className='login-welcome2'>
+                    Confirm your beach day...{reservation[0].date}
                 </label>
                 <input
+                    className='dropCalendar'
                     type="date"
                     placeholder='start date...'
                     value={date}
@@ -91,7 +94,7 @@ return (
                     required
                 />
 
-                <label>
+                <label className='login-welcome2'>
                     Are you still visiting {reservation[0].location}?
                 </label>
                 <select
@@ -100,13 +103,13 @@ return (
                     required
                     onChange={(e) => setLocation(e.target.value)}
                 >
-                    <option value='' disabled  >Please confirm the location...</option>
+                    <option value='' disabled  >PLEASE CONFIRM LOCATION...</option>
                     <option value='Villano'>Villano Beach</option>
                     <option value='St Augustine Pier'>St Augustine Pier</option>
                     <option value='Crescent Beach'>Crescent Beach</option>   
                 </select>
 
-                <label>
+                <label className='login-welcome2'>
                     Do you still want Beach Chair Setup #{reservation[0].arrangement}?
                 </label>
                 <select
@@ -115,15 +118,17 @@ return (
                     required
                     onChange={(e) => setArrangement(e.target.value)}
                 >
-                    <option value='' disabled  >Please confirm your set up...</option>
+                    <option value='' disabled  >PLEASE CONFIRM SETUP...</option>
                     <option value={1}>#1 - Solo</option>
                     <option value={2}>#2 - Couples</option>
                     <option value={3}>#3 - Family</option>   
                 </select>
 
-                <button className='bookBtn' type="submit">Let's Do It</button>
+                <button className='loginBtn bookBtn' type="submit">Let's Do It</button>
             </form>
-    </>
+            <div className="spacer"></div>
+            <Price />
+    </div>
   );
 }
 
