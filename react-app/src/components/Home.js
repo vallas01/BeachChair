@@ -51,7 +51,7 @@ function Home() {
                 return (
                     
                     <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
-                <div><strong>{review.location}</strong> - {review.text}
+                <div><strong style={{textDecoration:"underline"}}>{review.location}</strong> - {review.text}
                 </div>  
               
 
