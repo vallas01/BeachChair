@@ -22,7 +22,7 @@ height: 30px;
 border: solid 1px #ccc;
 display: flex;
 flex-direction: row-reverse;
-font-size: 1.5em;
+font-size: 2.0em;
 justify-content: space-around;
 padding: 0 .2em;
 text-align: center;
@@ -67,7 +67,13 @@ margin: 5px;
 
 .reviewInput {
 height: 60px;
-background-color: lightyellow;       
-border: 2px solid black;      
-font-size: 16px;    
+background-color: white;       
+width: 264px;     
+font-size: 16px;  
+border: 1px solid rgba(0,64,128,100%);
+color: rgba(0,64,128,100%);
+}
+
+.review-spacer {
+    margin-bottom: 20%;
 }
