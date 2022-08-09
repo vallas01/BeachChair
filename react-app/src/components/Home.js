@@ -1,6 +1,6 @@
 
-// eslint-disable-next-line
-import React, { useEffect, useState } from "react";
+
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getReviews } from "../store/review";
@@ -8,7 +8,7 @@ import './Home.css';
 import Price from "./Price";
 
 function Home() {
-    // eslint-disable-next-line
+    
     const dispatch = useDispatch()
     
     const sessionUser = useSelector(state => state?.session.user);
@@ -29,19 +29,20 @@ function Home() {
    
     return (
         <>
-            
-            <div className="home-container">
-            <h2 className="user-header">Plan the Perfect Vacation!</h2>
-                
+        <div className="home-container">
+            <div className="value-proposition">
 
-                {sessionUser && (
-                    <NavLink className="navBtn" to="/reservation">Let's Do It!</NavLink>
-                )}
-                {!sessionUser && (
-                    <NavLink className="navBtn" to="/login">Set up my Beach Chair!</NavLink>
-                )}
+                <div className="value-header">Plan the Perfect Vacation!</div>
+                <div className="value-btn-container">
+                    {sessionUser && (
+                        <NavLink className="navBtnHome" to="/reservation">Set up my Beach Chair!</NavLink>
+                        )}
+                    {!sessionUser && (
+                        <NavLink className="navBtnHome" to="/login">Set up my Beach Chair!</NavLink>
+                        )}
+                </div>
+
             </div>
-
             <Price />
 
             <div className="topReview">
@@ -49,38 +50,39 @@ function Home() {
             {myReviews && myReviews?.map(review => {
                 return (
                     
-                <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
+                    <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
                 <div><strong>{review.location}</strong> - {review.text}
                 </div>  
               
 
               <div className="topReview-stars">
                 {review.rating === 5 && (
-                  <label style={{ cursor: "pointer" }}
+                    <label style={{ cursor: "pointer" }}
                     className="star-review">&#9733; &#9733; &#9733; &#9733; &#9733;</label>
-                )}
+                    )}
                 {review.rating === 4 && (
-                  <label style={{ cursor: "pointer" }}
+                    <label style={{ cursor: "pointer" }}
                     className="star-review">&#9733; &#9733; &#9733; &#9733; <span className="empty-stars">&#9733;</span> </label>
-                )}
+                    )}
                 {review.rating === 3 && (
-                  <label style={{ cursor: "pointer" }}
+                    <label style={{ cursor: "pointer" }}
                     className="star-review">&#9733; &#9733; &#9733; <span className="empty-stars">&#9733; &#9733;</span></label>
-                )}
+                    )}
                 {review.rating === 2 && (
-                  <label style={{ cursor: "pointer" }}
+                    <label style={{ cursor: "pointer" }}
                     className="star-review">&#9733; &#9733; <span className="empty-stars">&#9733; &#9733; &#9733;</span></label>
-                )}
+                    )}
                 {review.rating === 1 && (
-                  <label style={{ cursor: "pointer" }}
+                    <label style={{ cursor: "pointer" }}
                     className="star-review">&#9733; <span className="empty-stars">&#9733; &#9733; &#9733; &#9733;</span> </label>
-                )}
+                    )}
               </div>
                 </li>
                 )
             })}
             </div>
 
+        </div>
             
         </>
     )

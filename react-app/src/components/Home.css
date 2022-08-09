@@ -1,8 +1,28 @@
 .home-container {
-    margin: 200px;
+    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.value-proposition {
+    margin-top: 15%;
+    margin-bottom: 25%;
+}
+
+.value-header {
+    color: white;
+    font-size: 5rem;
+}
+
+.value-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100px;
+   
 }
 
 
@@ -29,4 +49,24 @@
 
 .topReview-stars {
     margin: 0px 20px 20px 30px;
+}
+
+.navBtnHome {
+    border: 1px solid rgba(0,64,128,100%);
+    border-radius: 10px;
+    height: 25px;
+    padding: 1rem;
+    background-color: rgba(74,172,39,100%);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(0,64,128);
+    font-size: 20px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+}
+
+.navBtnHome:hover {
+    box-shadow: 5px 5px rgba(0,0,0,20%);
+    font-weight:700;
 }
