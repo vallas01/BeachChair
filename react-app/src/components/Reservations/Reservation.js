@@ -53,7 +53,7 @@ function Reservation() {
 
 
     return (
-        <div className="booking-container form-container">
+        <div className="form-container">
         
             {/* <img className="background-Img" src='https://res.cloudinary.com/kelp-me/image/upload/v1659967136/Beachchair/big-rentals_yblfob.webp' alt='beachday'></img> */}
 

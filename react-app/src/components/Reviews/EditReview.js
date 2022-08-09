@@ -55,23 +55,23 @@ function EditReview() {
 
 
 return (
-    <>
-      <h1 className='review-title'> Edit Your Review </h1>
-
-      <div className='error-container'>
-        {errors.length > 0 && (
-            <ul >
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-          </ul>
-        )}
-      </div>
+    <div className='form-container'>
+        <form onSubmit={handleSubmit} className="form-log">
 
 
+        <h1 className='login-welcome1'> Edit Your Review </h1>
+
+        <div className='error-container'>
+          {errors.length > 0 && (
+              <ul >
+              {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+          )}
+        </div>
 
 
-      <form onSubmit={handleSubmit} className="review-form">
 
-        <label>
+        <label className='login-welcome2'>
           This review was for... {review[0].location}
         </label>
 
@@ -119,10 +119,10 @@ return (
            
 
 
-        <button className='hostSubmit' type="submit">Submit</button>
+        <button className='loginBtn bookBtn' type="submit">Let's Do It</button>
       </form>
 
-    </>
+    </div>
   );
 }
 
