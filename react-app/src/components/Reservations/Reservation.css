@@ -19,11 +19,20 @@
     background-color: rgba(0,0,0,10%);
     margin-bottom: 10px;
 } */
+.dropCalendar {
+    color: rgb(0,64,128);
+    height: 25px;
+    border-radius: 8px;
+    margin: 5px;
+}
 
 .dropList, .dropListEdit {
-    width: 200px;
+    width: 270px;
     height: 30px;
     margin: 5px;
+    text-align: center;
+    color: rgb(0,64,128);
+    border-radius: 8px;
 }
 
 .spacer {
