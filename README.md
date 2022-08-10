@@ -1,4 +1,4 @@
-<p align="center"># BeachChair, An App Academy Capstone Project</p>
+<h1 align="center"> BeachChair - My Capstone Project</h1p>
 
 ![homepage](https://user-images.githubusercontent.com/95183136/184034837-82cd9819-a4b2-466e-a2ab-e6eadbc3eced.PNG)
 
@@ -8,7 +8,15 @@ Written by Andy Vallas
 <p align="center">
 https://beachchair.herokuapp.com (live link)
 </p>
-<p align="center">
+
+
+
+![homepage2](https://user-images.githubusercontent.com/95183136/184039142-614bf041-7839-4f13-a3b5-f0ba8fe4f3e5.png)
+
+
+
+
+
    
 ## Project Description
 Users can reserve a beach chair and review the 3 main beaches in St. Augustine.
@@ -17,7 +25,7 @@ Users can reserve a beach chair and review the 3 main beaches in St. Augustine.
 React, Javascript, HTML, CSS, Python, Flask
 
 
-</p>
+
 
 
 <p align="center"> ************************************************************************************ </p>
@@ -27,10 +35,6 @@ React, Javascript, HTML, CSS, Python, Flask
 
 ## Project Download Instructions
 1. Clone this repository (only this branch)
-
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
-   ```
 
 2. Install dependencies
 
