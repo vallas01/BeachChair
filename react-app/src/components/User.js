@@ -70,32 +70,37 @@ function User() {
   
   
   return (
-    <>
-      <div className="user-container">
-        <h2 className='user-header' >User Details</h2>
+    <div className="user-container">
+
+      <div className="detail-container">
+        <h2 className='detail-header' >USER DETAILS</h2>
         
         <div className='user-header-details'>
 
           <img src={'https://res.cloudinary.com/kelp-me/image/upload/v1659139522/default-profile_w8hf54.png'} style={{ height: '250px', width: 'auto' }} alt='avatar' />
 
           <div className='user-info'>
-            <strong>Username: <span style={{ fontWeight: "normal" }}>{user.username} </span></strong>
-            <strong>First Name: <span style={{ fontWeight: "normal" }}>{user.first_name} </span></strong>
-            <strong> Last Name: <span style={{ fontWeight: "normal" }}>{user.last_name} </span></strong>
-            <strong>Email: <span style={{ fontWeight: "normal" }}>{user.email} </span> </strong>
+            <strong 
+            >Username: </strong><span style={{color:"red"}} >{user.username} </span>
+            <strong>First Name: </strong><span style={{ fontWeight: "normal" }}>{user.first_name} </span>
+            <strong> Last Name: </strong><span style={{ fontWeight: "normal" }}>{user.last_name} </span>
+            <strong>Email:  </strong><span style={{ fontWeight: "normal" }}>{user.email} </span>
           </div>
           
         </div>
       </div>
 
       <div className='reservation-container'>
-        <h2 className='user-header' >Your Upcoming Beach Days</h2>
+        <h2 className='detail-header' >YOUR UPCOMING BEACH DAYS</h2>
         {reservations && myReservation?.map(reservation => {
           return (
             <li className='review-info' key={reservation.id} style={{ listStyle: "none" }}>
-              <button onClick={() => handleUpdateReservation(reservation.id)}>Update</button>
-              <button onClick={() => deleteThisReservation(reservation.id)}>Delete</button>
               <div>On {reservation.date}, you'll have Beach Chair setup #{reservation.arrangement} waiting at {reservation.location}!
+              <div className='reservation-btn-container'>
+                  <button className='demoBtn userBtn'onClick={() => handleUpdateReservation(reservation.id)}>Update</button>
+                  <button className='demoBtn userBtn' style={{color:"red"}} onClick={() => deleteThisReservation(reservation.id)}>Delete</button>
+                  {/* <hr className='list'></hr> */}
+              </div>
               </div>
             </li>
             )
@@ -103,7 +108,7 @@ function User() {
       </div>
 
       <div className="review-container">
-        <h2 className='user-header' >Your Reviews</h2>
+        <h2 className='detail-header' >YOUR REVIEWS</h2>
         {reviews && myReview?.map(review => {
           return (
             <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
@@ -138,8 +143,8 @@ function User() {
                 )}
               </div>
 
-              <button onClick={() => handleUpdateReview(review.id)}>Update</button>
-              <button onClick={() => deleteThisReview(review.id)}>Delete</button>
+              <button className='demoBtn userBtn' onClick={() => handleUpdateReview(review.id)}>Update</button>
+              <button className='demoBtn userBtn' style={{color:"red"}} onClick={() => deleteThisReview(review.id)}>Delete</button>
               <hr className='list'></hr>
             </li>
           )
@@ -150,7 +155,7 @@ function User() {
           <div className='error-container'>{message}</div>
         )}
 
-    </>
+    </div>
   );
 }
 export default User;
