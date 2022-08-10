@@ -4,12 +4,26 @@
     align-items: center;
 }
 
-.user-header {
-    color: rgb(0,64,128);
-    display: flex;
-    justify-content: center;
+.detail-container {
+    margin-top: 200px;
+    width: 380px;
+    border: 1px solid rgba(0,0,0,20%);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,20%); 
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
 }
 
+.detail-header {
+    margin: 10px 80px;
+    text-align: center;
+    color: rgb(0,64,128);
+    background-color: rgba(255,255,255,50%); 
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+    padding: 4px;
+}
 
 .user-header-details {
     display: flex;
@@ -21,7 +35,43 @@
     flex-direction: column;
 }
 
+.user-info strong {
+    color: white;
+}
+
+.user-info span {
+    color: red;
+    text-indent: 15px;
+}
+
+.user-header {
+    color: rgb(0,64,128);
+    display: flex;
+    justify-content: center;
+}
+
+.reservation-container {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    width: 800px;
+    border: 1px solid rgba(0,0,0,20%);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,20%); 
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
+    margin-bottom: 10%;
+}
+
+.reservation-btn-container {
+    display: flex;
+    justify-content: center;
+}
+.userBtn {
+    width: 80px; 
+    margin: 10px;
+}
+
 hr.list {
-    border: 3px solid rgb(74,172,39);
+    border: 2px solid rgb(74,172,39);
     border-radius: 2px;
 }
