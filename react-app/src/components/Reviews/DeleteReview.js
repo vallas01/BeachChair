@@ -48,8 +48,8 @@ function ReviewNote() {
 
                 <h2 className='login-welcome1' >Are You Sure You Want To Delete This Review For</h2>
                 {myReview[0] && (<h2 className='delete-info' >{myReview[0].location}</h2>)}
-                <button className='demoBtn' onClick={() => deleteThisReview(userId)}>Yes</button>
-                <button className='demoBtn deleteNoBtn' onClick={() => handleContinue()}>No</button>
+                <button className='demoBtn' onClick={() => deleteThisReview(userId)}>YES</button>
+                <button className='demoBtn deleteNoBtn' onClick={() => handleContinue()}>NO</button>
             
             </div>
         </div>
