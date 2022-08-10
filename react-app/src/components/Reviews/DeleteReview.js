@@ -43,11 +43,15 @@ function ReviewNote() {
 
     return (
 
-        <div className="review-container">
+        <div className='form-container'>
+            <div className="delete-subcontainer">
+
                 <h2 className='user-header' >Are You Sure You Want To Delete This Review For</h2>
                 {myReview[0] && (<h2 className='user-header' >{myReview[0].location}</h2>)}
                 <button onClick={() => deleteThisReview(userId)}>Yes</button>
                 <button onClick={() => handleContinue()}>No</button>
+            
+            </div>
         </div>
 
     );
