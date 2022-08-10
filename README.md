@@ -1,5 +1,6 @@
 # BeachChair, An App Academy Capstone Project
 
+![homepage](https://user-images.githubusercontent.com/95183136/184034837-82cd9819-a4b2-466e-a2ab-e6eadbc3eced.PNG)
 
 <p align="center">
 Written by Andy Vallas
@@ -8,17 +9,23 @@ Written by Andy Vallas
 https://beachchair.herokuapp.com (live link)
 </p>
 <p align="center">
-(Login, write a review or add a photo and then click on your icon in the upper right corner to edit or delete your posts.)
+   
+## Project Description
+Users can reserve a beach chair and review the 3 main beaches in St. Augustine.
+   
+## Technologies Used
+React, Javascript, HTML, CSS, Python, Flask
+
+
 </p>
 
 
 <p align="center"> ************************************************************************************ </p>
 
-# Flask React Project
 
-This is the starter for the Flask React project.
 
-## Getting started
+
+## Project Download Instructions
 1. Clone this repository (only this branch)
 
    ```bash
@@ -53,54 +60,16 @@ This is the starter for the Flask React project.
    flask run
    ```
 
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+6. Open a second terminal, npm install and then npm start from your 'react-app' directory.
 
 ***
 
 
 *IMPORTANT!*
    psycopg2-binary MUST remain a dev dependency because you can't install it on alpine-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
+   There is a layer in the Dockerfile that will install psycopg2 (not binary).
 ***
 
-### Dev Containers (OPTIONAL for M1 Users)
-The following instructions detail an *optional* development setup for M1 Mac users having issues with the `psycopg` package.
-
-1. Make sure you have the [Microsoft Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed. 
-2. Make sure you have [Docker](https://www.docker.com/products/docker-desktop/) installed on your computer. 
-3. Clone the repository (only this branch)
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
-   ```
-4. Open the repo in VS Code. 
-5. Click "Open in Container" when VS Code prompts to open container in the bottom right hand corner. 
-6. **Be Patient!** The initial install will take a LONG time, it's building a container that has postgres preconfigured and even installing all your project dependencies. (For both flask and react!)
-
-   **Note:** This will take much less time on future starts because everything will be cached.
-
-7. Once everything is up, be sure to make a `.env` file based on `.env.example` in both the root directory and the *react-app* directory before running your app. You do not need a `DATABASE_URL` in the `.env` file if you are using this Docker setup for development - the URL is already set in the image (see `.devcontainer/Dockerfile` for the URL).
-
-8. Get into your pipenv, migrate your database, seed your database, and run your flask app
-
-   ```bash
-   pipenv shell
-   ```
-
-   ```bash
-   flask db upgrade
-   ```
-
-   ```bash
-   flask seed all
-   ```
-
-   ```bash
-   flask run
-   ```
-
-9. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
-
-<br>
 
 ## Deploy to Heroku
 This repo comes configured with Github Actions. When you push to your main branch, Github will automatically pull your code, package and push it to Heroku, and then release the new image and run db migrations. 
