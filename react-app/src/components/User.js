@@ -107,18 +107,13 @@ function User() {
           })}
       </div>
 
-      <div className="review-container">
+      <div className="topReview">
         <h2 className='detail-header' >YOUR REVIEWS</h2>
         {reviews && myReview?.map(review => {
           return (
-            <li className='review-info' key={review.id} style={{ listStyle: "none" }}>
-              <div>
-                <strong>Location reviewed: </strong>
-                {review.location}
-              </div>
-              <div>
-                  {review.text}
-              </div>  
+            <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
+              <div><strong style={{textDecoration:"underline"}}>{review.location}</strong> - {review.text}
+                </div>  
               
               <div>
                 {review.rating === 5 && (
