@@ -45,7 +45,7 @@ function Review() {
         if (data && data.errors) setErrors(data.errors);
     });
   
-
+    console.log('Review was created')
   }
 
 
