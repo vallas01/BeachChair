@@ -17,7 +17,7 @@ function Review() {
   const user = useSelector(state => state.session.user)
   
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors([]);
 
@@ -38,13 +38,14 @@ function Review() {
       rating
     };
     
-    dispatch(createReview(newReview))
+    await dispatch(createReview(newReview))
     .then(() => history.push(`/users/${user.id}`))
     .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
     });
-    // reset();
+  
+
   }
 
 
