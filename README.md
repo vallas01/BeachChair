@@ -10,7 +10,7 @@ https://beachchair.herokuapp.com (live link)
 <p align="center">
 (Login, write a review or add a photo and then click on your icon in the upper right corner to edit or delete your posts.)
 </p>
-![homepage](https://user-images.githubusercontent.com/95183136/184031268-c95afd46-c0cb-484e-9515-d195924cb7bc.PNG)
+
 
 <p align="center"> ************************************************************************************ </p>
 
