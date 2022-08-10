@@ -40,7 +40,7 @@ class SignUpForm(FlaskForm):
         'username', validators=[DataRequired(), username_exists, length(min=3, max=12)])
     first_name = StringField('first_name', validators=[DataRequired(), length(min=3, max=12)])
     last_name = StringField('last_name', validators=[DataRequired(), length(min=3, max=12)])
-    email = StringField('email', validators=[DataRequired(), user_exists, Email()])
+    email = StringField('email', validators=[DataRequired(), user_exists])
     password = StringField('password', validators=[DataRequired(), my_length_check])
     avatar = StringField('avatar')
     phone = StringField('phone')
