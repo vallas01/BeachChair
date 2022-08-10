@@ -40,11 +40,11 @@ function ReservationNote() {
 
     return (
         <div className='form-container'>
-            <div className="review-container">
-                    <h2 className='user-header' >Are you sure you want to Cancel your Beach Day for</h2>
-                    {myReservation[0] && (<h2 className='user-header' >{myReservation[0].location} on {myReservation[0].date}</h2>)}
-                    <button onClick={() => deleteThisReservation(userId)}>Yes</button>
-                    <button onClick={() => handleContinue()}>No</button>
+            <div className='form-container delete-container'>
+                    <h2 className='login-welcome1' >Are you sure you want to Cancel your Beach Day for</h2>
+                    {myReservation[0] && (<h2 className='delete-info' >{myReservation[0].location} on {myReservation[0].date}</h2>)}
+                    <button className='demoBtn' onClick={() => deleteThisReservation(userId)}>Yes</button>
+                    <button className='demoBtn deleteNoBtn' onClick={() => handleContinue()}>No</button>
             </div>
         </div>
     );

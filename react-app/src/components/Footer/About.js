@@ -7,7 +7,7 @@ function About() {
         <>
          <div className='tech-container'></div>
 
-            <div className='about-subcontainer'>I love learning.  While tinkering with Raspberry and Arduino micro-computers, I quickly found out my coding skills were too rusty for more complicated projects.  It was time to update my computer science skills.  Maybe a 24 week bootcamp was overkill but after writing the code for this website, programming an Arduino seems pretty easy now!!!
+            <div className='about-subcontainer'><span style={{color:"red"}}>I love learning.</span><br></br>While tinkering with Raspberry and Arduino micro-computers and controllers, I quickly found out my coding skills were too rusty for more complicated projects.  It was time to update my computer science skills.  Maybe a 24 week bootcamp was overkill but after writing the code for this website, programming an Arduino seems pretty easy now!!!
                     <p style={{color:"red"}}>Andy Vallas</p>
                     <div>
                             {/* <i className="fa-brands fa-github-square"></i> */}
