@@ -66,6 +66,11 @@
     display: flex;
     justify-content: center;
 }
+
+.top-review-container {
+    text-align: center;
+    color: white;
+}
 .userBtn {
     width: 80px; 
     margin: 10px;

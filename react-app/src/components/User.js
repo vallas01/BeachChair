@@ -67,7 +67,7 @@ function User() {
   
   
   
-  
+
   
   return (
     <div className="user-container">
@@ -92,6 +92,7 @@ function User() {
 
       <div className='reservation-container'>
         <h2 className='detail-header' >YOUR UPCOMING BEACH DAYS</h2>
+        { (myReservation.length===0) && (<div>NO RESERVATIONS</div>)}
         {reservations && myReservation?.map(reservation => {
           return (
             <li className='review-info' key={reservation.id} style={{ listStyle: "none" }}>
@@ -107,8 +108,9 @@ function User() {
           })}
       </div>
 
-      <div className="topReview">
+      <div className="topReview top-review-container">
         <h2 className='detail-header' >YOUR REVIEWS</h2>
+        { (myReview.length===0) && (<div>NO REVIEWS</div>)}
         {reviews && myReview?.map(review => {
           return (
             <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
