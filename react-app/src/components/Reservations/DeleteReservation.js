@@ -39,14 +39,14 @@ function ReservationNote() {
     
 
     return (
-
-        <div className="review-container">
-                <h2 className='user-header' >Are you sure you want to Cancel your Beach Day for</h2>
-                {myReservation[0] && (<h2 className='user-header' >{myReservation[0].location} on {myReservation[0].date}</h2>)}
-                <button onClick={() => deleteThisReservation(userId)}>Yes</button>
-                <button onClick={() => handleContinue()}>No</button>
+        <div className='form-container'>
+            <div className="review-container">
+                    <h2 className='user-header' >Are you sure you want to Cancel your Beach Day for</h2>
+                    {myReservation[0] && (<h2 className='user-header' >{myReservation[0].location} on {myReservation[0].date}</h2>)}
+                    <button onClick={() => deleteThisReservation(userId)}>Yes</button>
+                    <button onClick={() => handleContinue()}>No</button>
+            </div>
         </div>
-
     );
 }
 
