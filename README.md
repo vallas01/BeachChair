@@ -1,4 +1,4 @@
-# BeachChair, An App Academy Capstone Project
+<p align="center"># BeachChair, An App Academy Capstone Project</p>
 
 ![homepage](https://user-images.githubusercontent.com/95183136/184034837-82cd9819-a4b2-466e-a2ab-e6eadbc3eced.PNG)
 
