@@ -20,7 +20,7 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
 
-    if (email)
+    if (username === 'Andrew') return setErrors(['Andrew is reserved, please change'])
 
     if (password === repeatPassword) {
       const data = await dispatch(signUp(username, first_name, last_name, email, password));
@@ -84,6 +84,7 @@ const SignUpForm = () => {
           name='username'
           onChange={updateUsername}
           value={username}
+          required
         ></input>
       </div>
 
@@ -94,6 +95,7 @@ const SignUpForm = () => {
           name='first_name'
           onChange={updateFirstname}
           value={first_name}
+          required
         ></input>
       </div>
       <div className='auth-input'>
@@ -103,6 +105,7 @@ const SignUpForm = () => {
           name='last_name'
           onChange={updateLastname}
           value={last_name}
+          required
         ></input>
       </div>
       
@@ -113,6 +116,7 @@ const SignUpForm = () => {
           name='email'
           onChange={updateEmail}
           value={email}
+          required
         ></input>
       </div>
       <div className='auth-input'>
@@ -122,6 +126,7 @@ const SignUpForm = () => {
           name='password'
           onChange={updatePassword}
           value={password}
+          required
         ></input>
       </div>
       <div className='auth-input'>
