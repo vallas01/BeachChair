@@ -14,7 +14,7 @@ const LoginForm = () => {
   const demoUser = async (e) => {
     return await dispatch(login("demo@aa.io", "password"))
   }
-
+// EMAIL SHOULD NOT PRE-POPULATE INPUT BOX
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ const LoginForm = () => {
             name='email'
             type='text'
             placeholder=''
-            // value={email}
+            value={email}
             onChange={updateEmail}
           />
         </div>
@@ -68,7 +68,7 @@ const LoginForm = () => {
             name='password'
             type='password'
             placeholder=''
-            // value={password}
+            value={password}
             onChange={updatePassword}
           />
         </div>
