@@ -16,11 +16,11 @@ function Review() {
 
   const user = useSelector(state => state.session.user)
   
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors([]);
-
+    
     if (rating < 1) {
       return setErrors(['Can you leave at least 1 star?'])
     }
@@ -30,7 +30,9 @@ function Review() {
     if (text.length > 240) {
       return setErrors(['Can you limit your review to 240 characters?'])
     }
-
+    
+    e.currentTarget.disabled = true;
+    
     const newReview = {
       user_id: user.id,
       location, 
