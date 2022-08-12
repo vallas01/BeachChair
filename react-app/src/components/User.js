@@ -114,7 +114,7 @@ function User() {
         {reviews && myReview?.map(review => {
           return (
             <li className='topReview-info' key={review.id} style={{ listStyle: "none" }}>
-              <div><strong style={{textDecoration:"underline"}}>{review.location}</strong> - {review.text}
+              <div className="review-text" ><strong style={{textDecoration:"underline"}}>{review.location}</strong> - {review.text}
                 </div>  
               
               <div>
