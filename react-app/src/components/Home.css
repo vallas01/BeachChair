@@ -41,6 +41,10 @@
     box-shadow: 0px 0px 15px rgba(0,0,0,20%);
 }
 
+.review-text {
+    overflow-wrap: break-word;
+}
+
 .topReview h2 {
     text-align: center;
     margin: 10px 5% 20px 5%;
