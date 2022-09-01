@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import './NavBar.css';
+import Weather from './Weather/Weather';
 
 
 
@@ -73,9 +74,12 @@ const NavBar = () => {
           <div className='logo-city'>
             ST AUGUSTINE
           </div>
-        
+          <div className='weatherContainer'>
+           
+            <Weather />
+          </div>
+          
         </div>
-        
           {sessionLinks}
         
     
