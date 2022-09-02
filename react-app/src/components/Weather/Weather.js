@@ -29,12 +29,14 @@ function Weather() {
           and a low of <strong>{kelvinToFarenheit(apiData.main.temp_min)}</strong>&deg;F . . . 
           Currently it is <strong>{kelvinToFarenheit(apiData.main.temp)}</strong>&deg;F
           </p>
+
           <div className="toggleButton">
             <label class="switch">
               <input type="checkbox" />
               <span class="slider round"></span>
             </label>
           </div>
+          
           </div>
           
         ) : (
