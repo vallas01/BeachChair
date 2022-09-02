@@ -1,8 +1,29 @@
+@media (width<932px) {
+    .weatherContainer {
+        display: none;
+    }
+}
+
 .weatherContainer {
     position: absolute;
     z-index: 1;
-    left: 25%;
-    width: 50%
+    top: 62px;
+    left: 22%;
+    width: 85%
+}
+
+.logo-city {
+    color: white;
+    background: rgba(0,0,0,10%);
+    font-size: 18px;
+    letter-spacing: .25rem;
+    font-weight:lighter;
+    text-decoration: none;
+    width: 188px;
+    position: fixed;
+    top: 82px;
+    left: 24px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
 }
 
 .background-Img {
@@ -90,19 +111,6 @@ nav {
     margin-top: 3px;
 }
 
-.logo-city {
-    color: white;
-    background: rgba(0,0,0,10%);
-    font-size: 18px;
-    letter-spacing: .25rem;
-    font-weight:lighter;
-    text-decoration: none;
-    width: 188px;
-    position: fixed;
-    top: 82px;
-    left: 24px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,30%);
-}
 
 .reviewBtn {
     color: rgb(0,64,128);
